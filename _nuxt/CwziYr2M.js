@@ -1,1 +1,0 @@
-const o={contact:"Connect Us",menu:{about:"About BHL",product:"BHL Product",join:"Join Us"}},e={header:o},t={contact:"联系我们",menu:{about:"关于 BHL",product:"BHL 产品",join:"加入我们"}},n={header:t},c=()=>({legacy:!1,locale:"zh",messages:{en:e,zh:n}});export{c as default};
