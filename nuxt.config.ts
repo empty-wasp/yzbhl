@@ -4,9 +4,9 @@ export default defineNuxtConfig({
     enabled: false,
   },
   modules: ["@nuxt/ui", "nuxt-swiper", "@nuxtjs/i18n"],
-  app: {
-    baseURL: "/yzbhl/",
-  },
+  // app: {
+  //   baseURL: "/yzbhl/",
+  // },
   nitro: {
     compressPublicAssets: true,
   },
