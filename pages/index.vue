@@ -89,7 +89,7 @@ const sections: any = [
     >
       <img :src="item" class="w-full" draggable="false" />
     </AppSwiper>
-<div>测试部署</div>
+    <div>测试部署</div>
     <AppLandingSection
       v-for="(section, index) in sections"
       :key="index"
