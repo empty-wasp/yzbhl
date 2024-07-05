@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   modules: ["@nuxt/ui", "nuxt-swiper", "@nuxtjs/i18n"],
   vite: {
     base: "/yzbhl/",
+    publicDir: true,
   },
   app: {
     baseURL: "/yzbhl/",
