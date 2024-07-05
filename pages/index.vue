@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const items = ["/images/banner1.png", "/images/banner2.png"];
+const items = ["images/banner1.png", "images/banner2.png"];
 
 const sections: any = [
   {
