@@ -3,7 +3,7 @@
     <template #logo>
       <div class="flex items-center">
         <!-- <img src="images/logo.png" alt=""> -->
-        <UAvatar size="lg" src="images/logo.png" alt="Logo" />
+        <UAvatar size="lg" src="/images/logo.png" alt="Logo" />
         <!-- <span class="text-2xl">BHL</span> -->
       </div>
     </template>
@@ -31,15 +31,15 @@ const langs = ["中文", "English"];
 const linkMap = reactive<any[]>([
   {
     label: computed(() => t("header.menu.about")), // t("header.menu.about")
-    to: "about",
+    to: "/about",
   },
   {
     label: computed(() => t("header.menu.product")),
-    to: "product",
+    to: "/product",
   },
   {
     label: computed(() => t("header.menu.join")),
-    to: "join",
+    to: "/join",
   },
 ]);
 const links = ref<any>(linkMap);
