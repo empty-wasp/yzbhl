@@ -5,7 +5,13 @@ export default defineNuxtConfig({
   // vite: {
   //   base: "/yzbhl/"
   // },
+  router: {
+    base: '/yzbhl/'
+  },
   app: {
     baseURL: "/yzbhl/",
+  },
+  nitro: {
+    compressPublicAssets: true, // 启动压缩
   },
 });
