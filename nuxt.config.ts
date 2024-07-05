@@ -5,9 +5,6 @@ export default defineNuxtConfig({
   // vite: {
   //   base: "/yzbhl/"
   // },
-  router: {
-    base: '/yzbhl/'
-  },
   app: {
     baseURL: "/yzbhl/",
   },

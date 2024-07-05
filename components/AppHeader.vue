@@ -2,7 +2,7 @@
   <BaseHeader :links="links">
     <template #logo>
       <div class="flex items-center">
-        <!-- <img src="images/logo.png" alt=""> -->
+        <img src="/images/logo.png" alt="">
         <UAvatar size="lg" src="/images/logo.png" alt="Logo" />
         <!-- <span class="text-2xl">BHL</span> -->
       </div>
