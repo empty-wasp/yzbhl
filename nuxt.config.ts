@@ -3,11 +3,16 @@ export default defineNuxtConfig({
   devtools: {
     enabled: false,
   },
-  modules: ["@nuxt/ui", "nuxt-swiper", "@nuxtjs/i18n"],
+
+  modules: ["@nuxt/ui", "nuxt-swiper", "@nuxtjs/i18n", "@nuxt/image"],
+
+  // "~/assets/css/reset.css",
+  css: [ "~/assets/css/main.scss"],
+
   // app: {
   //   baseURL: "/yzbhl/",
   // },
   nitro: {
     compressPublicAssets: true,
-  },
+  }
 });

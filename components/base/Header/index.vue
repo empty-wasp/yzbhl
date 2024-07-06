@@ -65,10 +65,10 @@
 import type { PropType } from "vue";
 
 const appConfig = useAppConfig();
-
+// backdrop-blur
 const config = computed(() => ({
   wrapper:
-    "bg-background/75 backdrop-blur border-b border-gray-200 dark:border-gray-800 -mb-px sticky top-0 z-50",
+    "bg-background/75 bg-white border-b border-gray-200 dark:border-gray-800 -mb-px sticky top-0 z-50",
   container: "flex items-center justify-between gap-3 h-[--header-height]",
   left: "lg:flex-1 flex items-center gap-1.5",
   center: "hidden lg:flex w-auto",

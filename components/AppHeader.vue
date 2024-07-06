@@ -8,6 +8,7 @@
     </template>
     <template #right>
       <USelect
+        class="font-semibold"
         size="sm"
         :options="langs"
         variant="none"
@@ -33,8 +34,8 @@ const linkMap = reactive<any[]>([
     to: "/about",
   },
   {
-    label: computed(() => t("header.menu.product")),
-    to: "/product",
+    label: computed(() => t("header.menu.probes")),
+    to: "/probes",
   },
   {
     label: computed(() => t("header.menu.join")),

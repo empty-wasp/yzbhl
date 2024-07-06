@@ -32,11 +32,11 @@
   const config = {
     wrapper: "relative",
     top: {
-      wrapper: "",
+      wrapper: "border-t border-gray-200 dark:border-gray-800",
       container: "py-8 lg:py-12",
     },
     bottom: {
-      wrapper: "",
+      wrapper: "border-t border-gray-200 dark:border-gray-800",
       container:
         "py-8 lg:py-4 lg:flex lg:items-center lg:justify-between lg:gap-x-3",
       left: "flex items-center justify-center lg:justify-start lg:flex-1 gap-x-1.5 mt-3 lg:mt-0 lg:order-1",

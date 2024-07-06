@@ -201,7 +201,7 @@ const config = computed(() => {
   );
 
   return {
-    wrapper: "py-24 sm:py-32",
+    wrapper: "py-16 sm:py-28",
     container,
     base,
     icon: {
@@ -210,8 +210,8 @@ const config = computed(() => {
     },
     headline: "mb-2 text-base/7 font-semibold text-primary",
     title:
-      "text-2xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-3xl lg:text-4xl",
-    description: "mt-6 text-lg/8 text-gray-600 dark:text-gray-300",
+      "text-xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-2xl lg:text-3xl",
+    description: "mt-6 text-base  text-gray-600 dark:text-gray-300",
     links: "mt-8 flex flex-wrap gap-x-3 gap-y-1.5",
     features: {
       wrapper: {

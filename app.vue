@@ -6,8 +6,3 @@
     </NuxtLayout>
   </div>
 </template>
-<style lang="scss">
-* {
-  --header-height: 64px;
-}
-</style>
