@@ -18,17 +18,29 @@
       </div>
       <!-- <ImagePlaceholder /> -->
     </AppProductCard>
+
+    <AppLandingSection title="品牌对比">
+      <UCard>
+        <UTable :rows="tables.items" :columns="tables.columns">
+          <template #result-data="{ row }">
+            {{ row.result.value }}
+          </template>
+        </UTable>
+      </UCard>
+    </AppLandingSection>
   </div>
 </template>
 
 <script setup lang="ts">
-import { probes } from "@/lang/probes";
+import { probes, compares } from "@/lang/probes";
 const { locale } = useI18n();
 const sections: any = ref([]);
+const tables: any = ref([]);
 watch(
   () => locale.value,
   (v: string) => {
     sections.value = probes[v];
+    tables.value = compares[v];
   },
   { immediate: true }
 );

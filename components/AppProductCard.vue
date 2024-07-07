@@ -207,7 +207,7 @@ const config = computed(() => {
   );
 
   return {
-    wrapper: "py-16 sm:py-28",
+    wrapper: "py-16 sm:py-24",
     container,
     base,
     icon: {

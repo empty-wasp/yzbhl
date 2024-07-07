@@ -279,3 +279,337 @@ export const introduces: any = [
     ],
   },
 ];
+
+export const compares: any = {
+  zh: {
+    columns: [
+      {
+        key: "contrastItem",
+        label: "对比项目",
+      },
+      {
+        key: "competingBrand",
+        label: "主要竞争品牌(DS )",
+      },
+      {
+        key: "bhl",
+        label: "BHL测头",
+      },
+      {
+        key: "result",
+        label: "结果",
+      },
+    ],
+    items: [
+      {
+        contrastItem: "精度",
+        competingBrand: "≤0.001mm",
+        bhl: "≤0.001mm",
+        result: { value: "相同" },
+      },
+      {
+        contrastItem: "测量速度",
+        competingBrand: "11m/min",
+        bhl: "9m/min（升级款更快）",
+        result: { value: "相同" },
+      },
+      {
+        contrastItem: "传输方式",
+        competingBrand: "红外线",
+        bhl: "红外线",
+        result: { value: "相同" },
+      },
+      {
+        contrastItem: "传输开关",
+        competingBrand: "手动-M码启动/关闭",
+        bhl: "自动（节能省电）",
+        result: { value: "BHL优于DS", class: "text-red-500" },
+      },
+      {
+        contrastItem: "电池寿命",
+        competingBrand: "90天",
+        bhl: "≧120天",
+        result: { value: "BHL优于DS", class: "text-red-500" },
+      },
+      {
+        contrastItem: "探头开关",
+        competingBrand: "需要",
+        bhl: "自动",
+        result: { value: "BHL优于DS", class: "text-red-500" },
+      },
+      {
+        contrastItem: "系统信号发射角度",
+        competingBrand: "120度",
+        bhl: "120度",
+        result: { value: "相同" },
+      },
+
+      {
+        contrastItem: "电池型号",
+        competingBrand: "通用",
+        bhl: "通用",
+        result: { value: "相同" },
+      },
+      {
+        contrastItem: "传输距离",
+        competingBrand: "5米",
+        bhl: "2~5米可自行控制（可防干扰",
+        result: { value: "BHL优于DS", class: "text-red-500" },
+      },
+      {
+        contrastItem: "产品寿命",
+        competingBrand: "≧1000万次",
+        bhl: "≧1000万次",
+        result: { value: "相同" },
+      },
+      {
+        contrastItem: "其它",
+        competingBrand: "相同",
+        bhl: "相同",
+        result: { value: "相同" },
+      },
+    ],
+  },
+  en: {
+    columns: [
+      {
+        key: "contrastItem",
+        label: "Items for Comparison",
+      },
+      {
+        key: "competingBrand",
+        label: "Major Competing Brand (DS)",
+      },
+      {
+        key: "bhl",
+        label: "BHL Probe",
+      },
+      {
+        key: "result",
+        label: "Result",
+      },
+    ],
+    items: [
+      {
+        contrastItem: "Precision",
+        competingBrand: "≤0.001mm",
+        bhl: "≤0.001mm",
+        result: { value: "Same" },
+      },
+      {
+        contrastItem: "Measuring speed",
+        competingBrand: "11m/min",
+        bhl: "9 m/min (The upgraded version is faster.)",
+        result: { value: "Same" },
+      },
+      {
+        contrastItem: "Transmission mode",
+        competingBrand: "Infrared",
+        bhl: "Infrared",
+        result: { value: "Same" },
+      },
+      {
+        contrastItem: "Transmission switch",
+        competingBrand: "Manual - M code start / shut",
+        bhl: "Automatic (energy-saving and power-saving)",
+        result: { value: "BHL better than DS", class: "text-red-500" },
+      },
+      {
+        contrastItem: "Battery life",
+        competingBrand: "90 days",
+        bhl: "≧120 days",
+        result: { value: "BHL better than DS", class: "text-red-500" },
+      },
+      {
+        contrastItem: "Probe switch",
+        competingBrand: "Needed",
+        bhl: "Automatic",
+        result: { value: "BHL better than DS", class: "text-red-500" },
+      },
+      {
+        contrastItem: "Signal emission angle of the system",
+        competingBrand: "120 degree",
+        bhl: "120 degree",
+        result: { value: "Same" },
+      },
+
+      {
+        contrastItem: "Battery model",
+        competingBrand: "Universal",
+        bhl: "Universal",
+        result: { value: "Same" },
+      },
+      {
+        contrastItem: "Transmission distance",
+        competingBrand: "5m",
+        bhl: "Self-controlled within 2 to 5 meters (anti-interference)",
+        result: { value: "BHL better than DS", class: "text-red-500" },
+      },
+      {
+        contrastItem: "Product life",
+        competingBrand: "≧10 million times",
+        bhl: "≧10 million times",
+        result: { value: "Same" },
+      },
+      {
+        contrastItem: "Others",
+        competingBrand: "Same",
+        bhl: "Same",
+        result: { value: "Same" },
+      },
+    ],
+  },
+};
+
+export const attachments: any = {
+  zh: {
+    columns: [
+      {
+        key: "name",
+        label: "名称",
+      },
+      {
+        key: "diameter",
+        label: "测球直径（mm）",
+      },
+      {
+        key: "materials",
+        label: "测杆材料",
+      },
+      {
+        key: "totalLength",
+        label: "总长度（mm）",
+      },
+      {
+        key: "effectiveLength",
+        label: "有效长度(mm)",
+      },
+    ],
+    items: [
+      {
+        name: "直测针",
+        diameter: "1.0红宝石",
+        materials: "硬质合金",
+        totalLength: "20",
+        effectiveLength: "18",
+      },
+      {
+        name: "直测针",
+        diameter: "2.0红宝石",
+        materials: "硬质合金",
+        totalLength: "20",
+        effectiveLength: "18",
+      },
+      {
+        name: "直测针",
+        diameter: "5.0红宝石",
+        materials: "不锈钢",
+        totalLength: "50/70/90",
+        effectiveLength: "35/60/80",
+      },
+      {
+        name: "直测针",
+        diameter: "6.0红宝石",
+        materials: "不锈钢",
+        totalLength: "100",
+        effectiveLength: "85",
+      },
+      {
+        name: "柱形测针",
+        diameter: "1.0",
+        materials: "硬质合金",
+        totalLength: "20",
+        effectiveLength: "10",
+      },
+      {
+        name: "柱形测针",
+        diameter: "3.0",
+        materials: "硬质合金",
+        totalLength: "30",
+        effectiveLength: "20",
+      },
+      {
+        name: "加长杆",
+        diameter: "--",
+        materials: "陶瓷",
+        totalLength: "30/50/100",
+        effectiveLength: "--",
+      },
+    ],
+  },
+  en: {
+    columns: [
+      {
+        key: "name",
+        label: "Name",
+      },
+      {
+        key: "diameter",
+        label: "Diameter of Measuring Ball (mm)",
+      },
+      {
+        key: "materials",
+        label: "Material of Measuring Bar ",
+      },
+      {
+        key: "totalLength",
+        label: "Total Length (mm)",
+      },
+      {
+        key: "effectiveLength",
+        label: "Effective Length (mm)",
+      },
+    ],
+    items: [
+      {
+        name: "Straight measuring pin",
+        diameter: "1.0 ruby",
+        materials: "Hard alloy",
+        totalLength: "20",
+        effectiveLength: "18",
+      },
+      {
+        name: "Straight measuring pin",
+        diameter: "2.0 ruby",
+        materials: "Hard alloy",
+        totalLength: "20",
+        effectiveLength: "18",
+      },
+      {
+        name: "Straight measuring pin",
+        diameter: "5.0 ruby",
+        materials: "Stainless steel",
+        totalLength: "50/70/90",
+        effectiveLength: "35/60/80",
+      },
+      {
+        name: "Straight measuring pin",
+        diameter: "6.0 ruby",
+        materials: "Stainless steel",
+        totalLength: "100",
+        effectiveLength: "85",
+      },
+      {
+        name: "Column measuring pin",
+        diameter: "1.0",
+        materials: "Hard alloy",
+        totalLength: "20",
+        effectiveLength: "10",
+      },
+      {
+        name: "Column measuring pin",
+        diameter: "3.0",
+        materials: "Hard alloy",
+        totalLength: "30",
+        effectiveLength: "20",
+      },
+      {
+        name: "Lengthening bar",
+        diameter: "--",
+        materials: "Ceramics",
+        totalLength: "30/50/100",
+        effectiveLength: "--",
+      },
+    ],
+  },
+};
