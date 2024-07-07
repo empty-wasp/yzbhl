@@ -13,7 +13,7 @@
 
       <slot name="center">
         <!-- <UHorizontalNavigation :links="links" :class="ui.center" /> -->
-        <BaseHeaderLinks :links="links" :class="ui.center" />
+        <UiHeaderLinks :links="links" :class="ui.center" />
       </slot>
 
       <div :class="ui.right">

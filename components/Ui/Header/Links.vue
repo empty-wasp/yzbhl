@@ -26,7 +26,7 @@
 
         <template #panel="{ close }">
           <slot name="panel" :link="link" :close="close">
-            <BaseHeaderPopoverLinks :links="link.children" @click="close" />
+            <UiHeaderPopoverLinks :links="link.children" @click="close" />
           </slot>
         </template>
       </UPopover>

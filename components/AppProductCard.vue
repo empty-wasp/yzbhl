@@ -1,50 +1,92 @@
 <template>
   <div :class="ui.wrapper" v-bind="attrs">
-    <slot name="top" />
+    <ULink :to="to">
+      <slot name="top" />
 
-    <UContainer :class="ui.container">
-      <div
-        v-if="
-          icon ||
-          $slots.icon ||
-          headline ||
-          $slots.headline ||
-          title ||
-          $slots.title ||
-          description ||
-          $slots.description ||
-          links?.length ||
-          $slots.links
-        "
-        :class="ui.base"
-      >
-        <div v-if="icon || $slots.icon" :class="ui.icon.wrapper">
-          <slot name="icon">
-            <UIcon :name="(icon as string)" :class="ui.icon.base" />
-          </slot>
+      <UContainer :class="ui.container">
+        <div
+          v-if="
+            icon ||
+            $slots.icon ||
+            headline ||
+            $slots.headline ||
+            title ||
+            $slots.title ||
+            description ||
+            $slots.description ||
+            links?.length ||
+            $slots.links
+          "
+          :class="ui.base"
+        >
+          <div v-if="icon || $slots.icon" :class="ui.icon.wrapper">
+            <slot name="icon">
+              <UIcon :name="(icon as string)" :class="ui.icon.base" />
+            </slot>
+          </div>
+
+          <div v-else-if="headline || $slots.headline" :class="ui.headline">
+            <slot name="headline">
+              {{ headline }}
+            </slot>
+          </div>
+
+          <h2 v-if="title || $slots.title" :class="ui.title">
+            <slot name="title">
+              {{ title }}
+            </slot>
+          </h2>
+
+          <div v-if="description || $slots.description" :class="ui.description">
+            <slot name="description">
+              {{ description }}
+            </slot>
+          </div>
+
+          <dl
+            v-if="align !== 'center' && features?.length"
+            :class="[ui.features.wrapper.base, ui.features.wrapper.list]"
+          >
+            <div
+              v-for="feature in features"
+              :key="feature.name"
+              :class="ui.features.base"
+            >
+              <dt :class="ui.features.name">
+                <UIcon
+                  :name="feature.icon || ui.features.icon.name"
+                  :class="ui.features.icon.base"
+                  aria-hidden="true"
+                />
+                <span v-if="feature.name">{{ feature.name }}</span>
+              </dt>
+              <dd v-if="feature.description" :class="ui.features.description">
+                {{ feature.description }}
+              </dd>
+            </div>
+          </dl>
+
+          <div
+            v-if="align !== 'center' && (links?.length || $slots.links)"
+            :class="ui.links"
+          >
+            <slot name="links">
+              <UButton
+                v-for="(link, index) in links"
+                :key="index"
+                v-bind="link"
+                @click="link.click"
+              />
+            </slot>
+          </div>
         </div>
 
-        <div v-else-if="headline || $slots.headline" :class="ui.headline">
-          <slot name="headline">
-            {{ headline }}
-          </slot>
-        </div>
-
-        <h2 v-if="title || $slots.title" :class="ui.title">
-          <slot name="title">
-            {{ title }}
-          </slot>
-        </h2>
-
-        <div v-if="description || $slots.description" :class="ui.description">
-          <slot name="description">
-            {{ description }}
-          </slot>
-        </div>
+        <slot v-if="$slots[slot || 'default']" :name="slot || 'default'" />
+        <div v-else-if="align === 'right'" />
 
         <dl
-          v-if="align !== 'center' && features?.length"
-          :class="[ui.features.wrapper.base, ui.features.wrapper.list]"
+          v-if="align === 'center' && features?.length"
+          :class="[ui.features.wrapper.base, ui.features.wrapper.grid]"
         >
           <div
             v-for="feature in features"
@@ -66,8 +108,8 @@
         </dl>
 
         <div
-          v-if="align !== 'center' && (links?.length || $slots.links)"
-          :class="ui.links"
+          v-if="align === 'center' && (links?.length || $slots.links)"
+          :class="twMerge(ui.links, 'mt-0 justify-center')"
         >
           <slot name="links">
             <UButton
@@ -78,50 +120,10 @@
             />
           </slot>
         </div>
-      </div>
+      </UContainer>
 
-      <slot v-if="$slots[slot || 'default']" :name="slot || 'default'" />
-      <div v-else-if="align === 'right'" />
-
-      <dl
-        v-if="align === 'center' && features?.length"
-        :class="[ui.features.wrapper.base, ui.features.wrapper.grid]"
-      >
-        <div
-          v-for="feature in features"
-          :key="feature.name"
-          :class="ui.features.base"
-        >
-          <dt :class="ui.features.name">
-            <UIcon
-              :name="feature.icon || ui.features.icon.name"
-              :class="ui.features.icon.base"
-              aria-hidden="true"
-            />
-            <span v-if="feature.name">{{ feature.name }}</span>
-          </dt>
-          <dd v-if="feature.description" :class="ui.features.description">
-            {{ feature.description }}
-          </dd>
-        </div>
-      </dl>
-
-      <div
-        v-if="align === 'center' && (links?.length || $slots.links)"
-        :class="twMerge(ui.links, 'mt-0 justify-center')"
-      >
-        <slot name="links">
-          <UButton
-            v-for="(link, index) in links"
-            :key="index"
-            v-bind="link"
-            @click="link.click"
-          />
-        </slot>
-      </div>
-    </UContainer>
-
-    <slot name="bottom" />
+      <slot name="bottom" />
+    </ULink>
   </div>
 </template>
 
@@ -138,6 +140,10 @@ defineOptions({
 });
 
 const props = defineProps({
+  to: {
+    type: String,
+    default: undefined,
+  },
   icon: {
     type: String,
     default: undefined,

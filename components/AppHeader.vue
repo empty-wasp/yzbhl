@@ -1,5 +1,5 @@
 <template>
-  <BaseHeader :links="links">
+  <UiHeader :links="links">
     <template #logo>
       <div class="flex items-center">
         <UAvatar size="lg" src="images/logo.png" alt="Logo" />
@@ -21,7 +21,7 @@
         class="hidden lg:flex"
       />
     </template>
-  </BaseHeader>
+  </UiHeader>
 </template>
 
 <script setup lang="ts">

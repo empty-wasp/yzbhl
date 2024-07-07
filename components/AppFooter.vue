@@ -73,9 +73,9 @@ function onSubmit() {
 </script>
 
 <template>
-  <BaseFooter>
+  <UiFooter>
     <template #top>
-      <BaseFooterColumns :links="links">
+      <UiFooterColumns :links="links">
         <template #right>
           <form @submit.prevent="onSubmit">
             <UFormGroup
@@ -106,7 +106,7 @@ function onSubmit() {
             </UFormGroup>
           </form>
         </template>
-      </BaseFooterColumns>
+      </UiFooterColumns>
     </template>
 
     <template #left>
@@ -127,5 +127,5 @@ function onSubmit() {
         variant="ghost"
       />
     </template>
-  </BaseFooter>
+  </UiFooter>
 </template>

@@ -1,6 +1,6 @@
 export default defineAppConfig({
   ui: {
-    primary: 'blue',
+    primary: "blue",
     variables: {
       light: {
         background: "255 255 255",
@@ -25,6 +25,10 @@ export default defineAppConfig({
       menu: "i-heroicons-bars-3-20-solid",
       close: "i-heroicons-x-mark-20-solid",
       check: "i-heroicons-check-circle-20-solid",
+      thumb: "i-heroicons-hand-thumb-up",
+      play: "i-heroicons-play",
+      rss: "i-heroicons-rss-solid",
+      globe: "i-heroicons-globe-alt",
     },
     presets: {
       button: {
