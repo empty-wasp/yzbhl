@@ -16,7 +16,7 @@
     </UContainer>
 
     <div :class="ui.table.wrapper">
-      <div :class="ui.table.title">相关附件：测针/标定环规/标定球/电池</div>
+      <div :class="ui.table.title">{{ $t("probe.detail.attachments") }}</div>
       <UCard>
         <UTable :rows="tables.items" :columns="tables.columns" />
       </UCard>

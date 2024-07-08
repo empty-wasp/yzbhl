@@ -1,8 +1,8 @@
 <template>
   <div :class="ui.wrapper">
     <UiPageHeader
-      :title="$t('product.header.title')"
-      :description="$t('product.header.description')"
+      :title="$t('probe.header.title')"
+      :description="$t('probe.header.description')"
     />
     <AppProductCard
       v-for="(item, index) in sections"
@@ -19,7 +19,7 @@
       <!-- <ImagePlaceholder /> -->
     </AppProductCard>
 
-    <AppLandingSection title="品牌对比">
+    <AppLandingSection :title="$t('probe.compare')">
       <UCard>
         <UTable :rows="tables.items" :columns="tables.columns">
           <template #result-data="{ row }">

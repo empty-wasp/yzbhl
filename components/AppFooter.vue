@@ -1,53 +1,44 @@
 <script setup lang="ts">
 const links = [
   {
-    label: "Resources",
+    label: "关于BHL",
     children: [
       {
-        label: "Help center",
+        label: "公司简介",
       },
       {
-        label: "Docs",
+        label: "发展历程",
       },
       {
-        label: "Roadmap",
-      },
-      {
-        label: "Changelog",
+        label: "荣誉资质",
       },
     ],
   },
   {
-    label: "Features",
+    label: "BHL制造",
     children: [
       {
-        label: "Affiliates",
+        label: "核心技术",
       },
       {
-        label: "Portal",
+        label: "服务领域",
       },
       {
-        label: "Jobs",
-      },
-      {
-        label: "Sponsors",
+        label: "方案案例",
       },
     ],
   },
   {
-    label: "Company",
+    label: "联系我们",
     children: [
       {
-        label: "About",
+        label: "电话：86-17715249752",
       },
       {
-        label: "Pricing",
+        label: "邮箱：206674576@163.com",
       },
       {
-        label: "Careers",
-      },
-      {
-        label: "Blog",
+        label: "公司地址：江苏省苏州市昆山城北玉杨路777号13房",
       },
     ],
   },
@@ -75,57 +66,27 @@ function onSubmit() {
 <template>
   <UiFooter>
     <template #top>
-      <UiFooterColumns :links="links">
-        <template #right>
-          <form @submit.prevent="onSubmit">
-            <UFormGroup
-              label="Subscribe to our newsletter"
-              :ui="{ container: 'mt-3' }"
-            >
-              <UInput
-                v-model="email"
-                type="email"
-                placeholder="Enter your email"
-                :ui="{ icon: { trailing: { pointer: '' } } }"
-                required
-                size="xl"
-                autocomplete="off"
-                class="max-w-sm"
-                input-class="rounded-full"
-              >
-                <template #trailing>
-                  <UButton
-                    type="submit"
-                    size="xs"
-                    color="primary"
-                    :label="loading ? 'Subscribing' : 'Subscribe'"
-                    :loading="loading"
-                  />
-                </template>
-              </UInput>
-            </UFormGroup>
-          </form>
+      <UiFooterColumns :links="links" :ui="{ center: 'auto-cols-auto' }">
+        <template #left>
+          <NuxtImg class="w-36" src="images/logo@2.png" />
         </template>
       </UiFooterColumns>
     </template>
 
-    <template #left>
+    <template #center>
       <p class="text-gray-500 dark:text-gray-400 text-sm">
-        Copyright © {{ new Date().getFullYear() }}. All rights reserved.
+        <span
+          >Copyright © {{ new Date().getFullYear() }}
+          {{ $t("footer.copyright") }}</span
+        >
+        <NuxtLink
+          class="hover:text-primary-500"
+          target="_blank"
+          to="https://beian.miit.gov.cn"
+        >
+          湘ICP备2023027925号-1</NuxtLink
+        >
       </p>
-    </template>
-
-    <template #right>
-      <!-- <UColorModeButton size="sm" /> -->
-
-      <UButton
-        to="https://github.com/nuxt-ui-pro/saas"
-        target="_blank"
-        icon="i-simple-icons-github"
-        aria-label="GitHub"
-        color="gray"
-        variant="ghost"
-      />
     </template>
   </UiFooter>
 </template>

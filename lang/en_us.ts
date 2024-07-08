@@ -1,4 +1,5 @@
 export default {
+  companyName: "Suzhou Bo Hui Lai Precision Machinery Co., Ltd.",
   header: {
     contact: "Connect Us",
     menu: {
@@ -7,10 +8,18 @@ export default {
       join: "Join Us",
     },
   },
-  product: {
+  footer: {
+    copyright: "Suzhou Bo Hui Lai Precision Machinery Co., Ltd.",
+  },
+  probe: {
     header: {
       title: "Product",
       description: "Precision measurement and process control",
+    },
+    compare: "Comparison Between Brands",
+    detail: {
+      attachments:
+        "Relevant appendix: Measuring pin/ calibration ring gauge/ spherical displacer/ battery",
     },
   },
   patent: {

@@ -1,4 +1,5 @@
 export default {
+  companyName: "苏州博惠莱精密机械有限公司",
   header: {
     contact: "联系我们",
     menu: {
@@ -7,10 +8,17 @@ export default {
       join: "加入我们",
     },
   },
-  product: {
+  footer: {
+    copyright: "苏州博惠莱精密机械有限公司  版权所有",
+  },
+  probe: {
     header: {
       title: "测头",
       description: "精密测量和制程控制",
+    },
+    compare: "品牌对比",
+    detail: {
+      attachments: "相关附件：测针/标定环规/标定球/电池",
     },
   },
   patent: {

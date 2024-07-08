@@ -29,21 +29,6 @@ const sections = reactive<any[]>([
     >
       <ImagePlaceholder />
     </AppLandingSection>
-
-    <AppLandingSection :title="$t('patent.title')">
-      <BasePageColumns class="xl:columns-4">
-        <div
-          v-for="(testimonial, index) in [1, 2, 3, 4, 5, 6, 7]"
-          :key="index"
-          class="break-inside-avoid"
-        >
-          <div class="bg-gray-100/50 dark:bg-gray-800/50"></div>
-          <UCard>
-            <NuxtImg src="images/banner1.png" alt="123" />
-          </UCard>
-        </div>
-      </BasePageColumns>
-    </AppLandingSection>
   </div>
 </template>
 <style scoped></style>
