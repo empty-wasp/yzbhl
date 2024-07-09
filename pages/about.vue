@@ -1,24 +1,29 @@
 <template>
   <div :class="ui.wrapper">
     <AppLandingSection
+      :ui="{ description: 'text-left whitespace-pre-wrap' }"
       :title="$t('companyName')"
       :description="$t('about.description')"
     >
       <ImagePlaceholder />
     </AppLandingSection>
 
-    <AppTimeline />
+    <AppLandingSection :title="$t('about.timeline')">
+      <div class="lg:px-24">
+        <AppTimeline />
+      </div>
+    </AppLandingSection>
 
-    <AppLandingSection :title="$t('patent.title')">
+    <AppLandingSection :title="$t('about.patent')">
       <UiPageColumns class="xl:columns-4">
         <div
-          v-for="(testimonial, index) in [1, 2, 3, 4, 5, 6, 7]"
+          v-for="(i, index) in patentList"
           :key="index"
           class="break-inside-avoid"
         >
           <div class="bg-gray-100/50 dark:bg-gray-800/50"></div>
           <UCard>
-            <NuxtImg src="images/1.png" alt="123" />
+            <NuxtImg :src="`images/patent/patent${i}.png`" />
           </UCard>
         </div>
       </UiPageColumns>
@@ -27,6 +32,7 @@
 </template>
 
 <script setup lang="ts">
+const patentList = Array.from(Array(12).keys(), (n) => n + 1);
 const ui = {
   wrapper: "mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl",
   image: {

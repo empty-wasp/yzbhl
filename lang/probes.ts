@@ -7,7 +7,7 @@ export const probes: any = {
       to: "/probes/1",
       align: "left",
       title: "HL-OPG400 Mini（高精版）",
-      image: "images/banner1.png",
+      image: "images/probes/400mini.png",
       features: [
         {
           name: "产品优势",
@@ -36,7 +36,7 @@ export const probes: any = {
       to: "/probes/2",
       align: "right",
       title: "BHL-OPG400mS（普通版）",
-      image: "images/banner2.png",
+      image: "images/probes/400ms.png",
       features: [
         {
           name: "产品优势",
@@ -68,7 +68,7 @@ export const probes: any = {
       to: "/probes/1",
       align: "left",
       title: "HL-OPG400 Mini (high precision)",
-      image: "images/banner1.png",
+      image: "images/probes/400mini.png",
       features: [
         {
           name: "Product Superiority",
@@ -100,7 +100,7 @@ export const probes: any = {
       to: "/probes/2",
       align: "right",
       title: "BHL-OPG400mS (general)",
-      image: "images/banner2.png",
+      image: "images/probes/400ms.png",
       features: [
         {
           name: "Product Superiority",

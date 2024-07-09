@@ -1,5 +1,10 @@
 export default {
   companyName: "苏州博惠莱精密机械有限公司",
+  home: {
+    about: "关于我们",
+    description:
+      "自主研发BHL品牌的测量系统， 通过潜在客户的现场使用测试及不断的技术升级，于2019年正式开始销售。目前已涉及：航天、军工、医疗器械、汽车零部件、模具、手机、电脑等电子行业。面对激烈的市场竞争，公司凭借其自身的优势，整合外部资源，优化内部资源管理，不断开拓创新，正朝着专业、专一、多元化品种研发前进",
+  },
   header: {
     contact: "联系我们",
     menu: {
@@ -21,44 +26,12 @@ export default {
       attachments: "相关附件：测针/标定环规/标定球/电池",
     },
   },
-  patent: {
-    title: "专利证书",
-  },
   about: {
-    title: "关于我们",
-    description:
-      "苏州博惠莱精密机械有限公司成立于2013年10月18日，位于中国百强县之首暨号称东方水城的昆山市，城市的富强带动了博惠莱的快速发展。同时，客户的大力支持推动了博惠莱在多个行业占领主要市场，让一个来自湘西的穷小子开始拥有了伟大的梦想，踏上了追梦的道路 ",
-    id: "features",
-    align: "left",
-    features: [
-      {
-        name: "Easy to use",
-        description: "Id laborum laboris duis nostrud excepteur ut velit.",
-        icon: "i-heroicons-cog",
-      },
-      {
-        name: "Reliable",
-        description:
-          "Magna Lorem ex cillum fugiat ad enim aute irure sit duis minim.",
-        icon: "i-heroicons-check",
-      },
-      {
-        name: "Secure",
-        description:
-          "Proident nostrud excepteur sint ut culpa consectetur aute adipisicing.",
-        icon: "i-heroicons-lock-closed",
-      },
-    ],
-    links: [
-      {
-        label: "Explore components",
-        to: "/about",
-        color: "gray",
-        icon: "i-heroicons-arrow-right-20-solid",
-        trailing: true,
-        size: "md",
-        class: "ml-8",
-      },
-    ],
+    description: `\u00a0 \u00a0 \u00a0 \u00a0 苏州博惠莱精密机械有限公司成立于2013年10月18日，位于中国百强县之首暨号称东方水城的昆山市，城市的富强带动了博惠莱的快速发展。同时，客户的大力支持推动了博惠莱在多个行业占领主要市场，让一个来自湘西的穷小子开始拥有了伟大的梦想，踏上了追梦的道路。
+\u00a0 \u00a0 \u00a0 \u00a0 博惠莱公司-在业务初期，主要引进销售各国的加工设备、配件及应用技术，同时可提供整条服务链包含安装、调试、培训、维修、精度恢复、设备大修翻修等，最大程度地为客户节省成本和最大化效能。
+\u00a0 \u00a0 \u00a0 \u00a0 2018年，随着市场的快速发展，结合公司技术应用及服务团队的不断提升与付出，将主要业务进军到了测量系统的维修。在结合各个品牌的主要问题点后，我司开始自主研发BHL品牌的测量系统， 通过潜在客户的现场使用测试及不断的技术升级，于2019年正式开始销售。目前已涉及：航天、军工、医疗器械、汽车零部件、模具、手机、电脑等电子行业。面对激烈的市场竞争，公司凭借其自身的优势，整合外部资源，优化内部资源管理，不断开拓创新，正朝着专业、专一、多元化品种研发前进。
+\u00a0 \u00a0 \u00a0 \u00a0 秉承 服务第一、品质第一、效率第一的经营理念，红、专、度的管理理念竭诚为新老客户提供最大限度、一条龙的服务，来满足生产要求，以实现长久合作共赢、并共同创造未来、实现中国梦----自己的梦。`,
+    timeline: "发展历程",
+    patent: "专利证书",
   },
 };

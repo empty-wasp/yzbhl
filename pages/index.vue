@@ -23,8 +23,8 @@ const sections = reactive<any[]>([
     </AppSwiper>
 
     <AppLandingSection
-      :title="t('about.title')"
-      :description="t('about.description')"
+      :title="t('home.about')"
+      :description="t('home.description')"
       align="left"
     >
       <ImagePlaceholder />
