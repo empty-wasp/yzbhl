@@ -4,6 +4,8 @@
     <AppMain><slot /></AppMain>
 
     <AppFooter />
+    
+    <UNotifications />
   </div>
 </template>
 

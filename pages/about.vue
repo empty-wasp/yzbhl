@@ -1,6 +1,7 @@
 <template>
   <div :class="ui.wrapper">
     <AppLandingSection
+      id="description"
       :ui="{ description: 'text-left whitespace-pre-wrap' }"
       :title="$t('companyName')"
       :description="$t('about.description')"
@@ -8,13 +9,13 @@
       <ImagePlaceholder />
     </AppLandingSection>
 
-    <AppLandingSection :title="$t('about.timeline')">
+    <AppLandingSection id="timeline" :title="$t('about.timeline')">
       <div class="lg:px-24">
         <AppTimeline />
       </div>
     </AppLandingSection>
 
-    <AppLandingSection :title="$t('about.patent')">
+    <AppLandingSection id="patent" :title="$t('about.patent')">
       <UiPageColumns class="xl:columns-4">
         <div
           v-for="(i, index) in patentList"
@@ -32,6 +33,8 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({ title: "关于BHL" });
+
 const patentList = Array.from(Array(12).keys(), (n) => n + 1);
 const ui = {
   wrapper: "mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl",

@@ -5,12 +5,15 @@ const links = [
     children: [
       {
         label: "公司简介",
+        to: "/about/#description",
       },
       {
         label: "发展历程",
+        to: "/about/#timeline",
       },
       {
-        label: "荣誉资质",
+        label: "专利证书",
+        to: "/about/#patent",
       },
     ],
   },
@@ -43,24 +46,6 @@ const links = [
     ],
   },
 ];
-
-const toast = useToast();
-
-const email = ref("");
-const loading = ref(false);
-
-function onSubmit() {
-  loading.value = true;
-
-  setTimeout(() => {
-    toast.add({
-      title: "Subscribed!",
-      description: "You've been subscribed to our newsletter.",
-    });
-
-    loading.value = false;
-  }, 1000);
-}
 </script>
 
 <template>

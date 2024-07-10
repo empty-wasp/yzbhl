@@ -1,4 +1,9 @@
 <script setup lang="ts">
+useSeoMeta({
+  titleTemplate: "",
+  title: "BHL",
+});
+
 const items = ["images/banner1.png", "images/banner2.png"];
 const { t } = useI18n();
 

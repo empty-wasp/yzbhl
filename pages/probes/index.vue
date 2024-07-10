@@ -16,7 +16,6 @@
       <div :class="ui.image.wrapper">
         <NuxtImg :src="item.image" :alt="item.title" :class="ui.image.base" />
       </div>
-      <!-- <ImagePlaceholder /> -->
     </AppProductCard>
 
     <AppLandingSection :title="$t('probe.compare')">
@@ -32,6 +31,8 @@
 </template>
 
 <script setup lang="ts">
+useSeoMeta({ title: "BHL测头" });
+
 import { probes, compares } from "@/lang/probes";
 const { locale } = useI18n();
 const sections: any = ref([]);
