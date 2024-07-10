@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="result">
     <AppHeader :menus="result.menus" />
     <AppMain><slot /></AppMain>
 
