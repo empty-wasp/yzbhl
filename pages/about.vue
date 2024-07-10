@@ -6,12 +6,14 @@
       :title="$t('companyName')"
       :description="$t('about.description')"
     >
-      <ImagePlaceholder />
+
+      <NuxtImg src="images/bg.png" class="rounded-2xl" />
+
     </AppLandingSection>
 
     <AppLandingSection id="timeline" :title="$t('about.timeline')">
       <div class="lg:px-24">
-        <AppTimeline />
+        <AppTimeline :timelines="result.timeline" />
       </div>
     </AppLandingSection>
 
@@ -34,6 +36,8 @@
 
 <script setup lang="ts">
 useSeoMeta({ title: "关于BHL" });
+
+const { result }: any = await useAsyncConfig("about");
 
 const patentList = Array.from(Array(12).keys(), (n) => n + 1);
 const ui = {

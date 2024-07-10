@@ -7,11 +7,6 @@ export default {
   },
   header: {
     contact: "联系我们",
-    menu: {
-      about: "关于 BHL",
-      probes: "BHL 测头",
-      join: "加入我们",
-    },
   },
   footer: {
     copyright: "苏州博惠莱精密机械有限公司  版权所有",

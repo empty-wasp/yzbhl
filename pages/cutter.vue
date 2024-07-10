@@ -1,5 +1,5 @@
 <template>
-  <div>join</div>
+  <div>cutter</div>
 </template>
 
 <script setup lang="ts"></script>

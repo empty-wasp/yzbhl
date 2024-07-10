@@ -1,57 +1,18 @@
 <script setup lang="ts">
-const links = [
-  {
-    label: "关于BHL",
-    children: [
-      {
-        label: "公司简介",
-        to: "/about/#description",
-      },
-      {
-        label: "发展历程",
-        to: "/about/#timeline",
-      },
-      {
-        label: "专利证书",
-        to: "/about/#patent",
-      },
-    ],
+
+const props = defineProps({
+  blogroll: {
+    type: Array<any>,
+    default: () => [],
   },
-  {
-    label: "BHL制造",
-    children: [
-      {
-        label: "核心技术",
-      },
-      {
-        label: "服务领域",
-      },
-      {
-        label: "方案案例",
-      },
-    ],
-  },
-  {
-    label: "联系我们",
-    children: [
-      {
-        label: "电话：86-17715249752",
-      },
-      {
-        label: "邮箱：206674576@163.com",
-      },
-      {
-        label: "公司地址：江苏省苏州市昆山城北玉杨路777号13房",
-      },
-    ],
-  },
-];
+});
+
 </script>
 
 <template>
   <UiFooter>
     <template #top>
-      <UiFooterColumns :links="links" :ui="{ center: 'auto-cols-auto' }">
+      <UiFooterColumns :links="blogroll" :ui="{ center: 'auto-cols-auto' }">
         <template #left>
           <NuxtImg class="w-36" src="images/logo@2.png" />
         </template>

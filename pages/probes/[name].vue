@@ -1,14 +1,14 @@
 <template>
   <div :class="ui.wrapper">
-    <UiPageHeader :title="probe.title" />
+    <UiPageHeader :title="result.name" />
     <div :class="ui.image.wrapper">
-      <NuxtImg :src="probe.image" :alt="probe.title" :class="ui.image.base" />
+      <NuxtImg :src="result.image" :alt="result.name" :class="ui.image.base" />
     </div>
 
     <UContainer :class="ui.introduce">
       <UiIntroduceGrid>
         <UiIntroduceCard
-          v-for="(item, index) in introduceList"
+          v-for="(item, index) in result.introduces"
           :key="index"
           v-bind="item"
         />
@@ -18,31 +18,19 @@
     <div :class="ui.table.wrapper">
       <div :class="ui.table.title">{{ $t("probe.detail.attachments") }}</div>
       <UCard>
-        <UTable :rows="tables.items" :columns="tables.columns" />
+        <UTable
+          :rows="result.attachments.items"
+          :columns="result.attachments.columns"
+        />
       </UCard>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { probes, introduces, attachments } from "@/lang/probes";
 const route = useRoute();
-const { locale } = useI18n();
-
-const probe: any = ref({});
-const introduceList: any = ref([]);
-const tables: any = ref({});
-watch(
-  () => locale.value,
-  (v: string) => {
-    const { id }: any = route.params;
-    const _probes = probes[v];
-    probe.value = _probes[+id - 1];
-    introduceList.value = introduces[+id - 1][v];
-    tables.value = attachments[v];
-  },
-  { immediate: true }
-);
+const { name }: any = route.params;
+const { result }: any = await useAsyncConfig("probes", name);
 
 const ui = {
   wrapper: "mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl", // flex flex-col items-center

@@ -1,0 +1,58 @@
+{
+  "menus": [
+    { "label": "About BHL", "to": "/about" },
+    { "label": "BHL Probes", "to": "/probes" },
+    { "label": "BHL Milling Cutter", "to": "/cutter" },
+    { "label": "BHL Repair", "to": "/repair" }
+  ],
+  "blogroll": [
+    {
+      "label": "About BHL",
+      "children": [
+        {
+          "label": "Company Profile",
+          "to": "/about/#description"
+        },
+        {
+          "label": "Development Course",
+          "to": "/about/#timeline"
+        },
+        {
+          "label": "Patent Certificate",
+          "to": "/about/#patent"
+        }
+      ]
+    },
+    {
+      "label": "BHL Probes",
+      "children": [
+        {
+          "label": "BHL Probes",
+          "to": "/probes"
+        },
+        {
+          "label": "BHL Milling Cutter",
+          "to": "/cutter"
+        },
+        {
+          "label": "BHL Repair",
+          "to": "/repair"
+        }
+      ]
+    },
+    {
+      "label": "Contact Us",
+      "children": [
+        {
+          "label": "Tel: 0512-5777 0004"
+        },
+        {
+          "label": "E-mail: yzbhl88@yeah.net"
+        },
+        {
+          "label": "address: Room 13, No.777 Yuyang Road, Kunshan City North, Suzhou City, Jiangsu Province"
+        }
+      ]
+    }
+  ]
+}

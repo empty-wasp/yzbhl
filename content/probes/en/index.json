@@ -1,0 +1,149 @@
+{
+  "product": [
+    {
+      "to": "/probes/400mini",
+      "align": "left",
+      "title": "HL-OPG400 Mini (high precision)",
+      "image": "images/probes/400mini.png",
+      "features": [
+        {
+          "name": "Product Superiority",
+          "description": "It features a fast transmission efficiency, a powerful compatibility and interchangeability, a small size and a high precision (≤1μm)",
+          "icon": "i-heroicons-hand-thumb-up"
+        },
+        {
+          "name": "Start Up Mode",
+          "description": "The probe is started in two ways including using power-on code and receiving two kinds of infrared modulating signals",
+          "icon": "i-heroicons-play"
+        },
+        {
+          "name": "Signal Transmission",
+          "description": "Infrared coding is used to transmit signals between the probe and the receiver. It is resistant to interference and vibration",
+          "icon": "i-heroicons-rss-solid"
+        },
+        {
+          "name": "Field Of Use",
+          "description": "It can be used in various system spindle processing centers and various products (such as mobile phones, computers, electronics, communication, automobiles and molds)",
+          "icon": "i-heroicons-globe-alt"
+        }
+      ]
+    },
+    {
+      "to": "/probes/400ms",
+      "align": "right",
+      "title": "BHL-OPG400mS (general)",
+      "image": "images/probes/400ms.png",
+      "features": [
+        {
+          "name": "Product Superiority",
+          "description": "It features a fast transmission efficiency, a powerful compatibility and interchangeability, a small size and a high precision (≤1μm)",
+          "icon": "i-heroicons-hand-thumb-up"
+        },
+        {
+          "name": "Start Up Mode",
+          "description": "The probe is started in two ways including using power-on code and receiving two kinds of infrared modulating signals",
+          "icon": "i-heroicons-play"
+        },
+        {
+          "name": "Signal Transmission",
+          "description": "Infrared coding is used to transmit signals between the probe and the receiver. It is resistant to interference",
+          "icon": "i-heroicons-rss-solid"
+        },
+        {
+          "name": "Field Of Use",
+          "description": "It can be used in various system spindle processing centers and various products (such as mobile phones, computers, electronics, communication, automobiles and molds)",
+          "icon": "i-heroicons-globe-alt"
+        }
+      ]
+    }
+  ],
+  "compares": {
+    "columns": [
+      {
+        "key": "contrastItem",
+        "label": "Items for Comparison"
+      },
+      {
+        "key": "competingBrand",
+        "label": "Major Competing Brand (DS)"
+      },
+      {
+        "key": "bhl",
+        "label": "BHL Probe"
+      },
+      {
+        "key": "result",
+        "label": "Result"
+      }
+    ],
+    "items": [
+      {
+        "contrastItem": "Precision",
+        "competingBrand": "≤0.001mm",
+        "bhl": "≤0.001mm",
+        "result": { "value": "Same" }
+      },
+      {
+        "contrastItem": "Measuring speed",
+        "competingBrand": "11m/min",
+        "bhl": "9 m/min (The upgraded version is faster.)",
+        "result": { "value": "Same" }
+      },
+      {
+        "contrastItem": "Transmission mode",
+        "competingBrand": "Infrared",
+        "bhl": "Infrared",
+        "result": { "value": "Same" }
+      },
+      {
+        "contrastItem": "Transmission switch",
+        "competingBrand": "Manual - M code start / shut",
+        "bhl": "Automatic (energy-saving and power-saving)",
+        "result": { "value": "BHL better than DS", "class": "text-red-500" }
+      },
+      {
+        "contrastItem": "Battery life",
+        "competingBrand": "90 days",
+        "bhl": "≧120 days",
+        "result": { "value": "BHL better than DS", "class": "text-red-500" }
+      },
+      {
+        "contrastItem": "Probe switch",
+        "competingBrand": "Needed",
+        "bhl": "Automatic",
+        "result": { "value": "BHL better than DS", "class": "text-red-500" }
+      },
+      {
+        "contrastItem": "Signal emission angle of the system",
+        "competingBrand": "120 degree",
+        "bhl": "120 degree",
+        "result": { "value": "Same" }
+      },
+
+      {
+        "contrastItem": "Battery model",
+        "competingBrand": "Universal",
+        "bhl": "Universal",
+        "result": { "value": "Same" }
+      },
+      {
+        "contrastItem": "Transmission distance",
+        "competingBrand": "5m",
+        "bhl": "Self-controlled within 2 to 5 meters (anti-interference)",
+        "result": { "value": "BHL better than DS", "class": "text-red-500" }
+      },
+      {
+        "contrastItem": "Product life",
+        "competingBrand": "≧10 million times",
+        "bhl": "≧10 million times",
+        "result": { "value": "Same" }
+      },
+      {
+        "contrastItem": "Others",
+        "competingBrand": "Same",
+        "bhl": "Same",
+        "result": { "value": "Same" }
+      }
+    ]
+  }
+}

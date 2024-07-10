@@ -1,19 +1,13 @@
 <script setup lang="ts">
+const { t } = useI18n();
+
 useSeoMeta({
   titleTemplate: "",
-  title: "BHL",
+  title: t("companyName"),
 });
 
 const items = ["images/banner1.png", "images/banner2.png"];
-const { t } = useI18n();
 
-const sections = reactive<any[]>([
-  {
-    title: computed(() => t("about.title")),
-    description: computed(() => t("about.description")),
-    align: "left",
-  },
-]);
 </script>
 <template>
   <div>
@@ -32,7 +26,8 @@ const sections = reactive<any[]>([
       :description="t('home.description')"
       align="left"
     >
-      <ImagePlaceholder />
+      <!-- <ImagePlaceholder /> -->
+       <NuxtImg src="images/bg.png" class="rounded-2xl" />
     </AppLandingSection>
   </div>
 </template>

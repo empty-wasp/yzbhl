@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     enabled: false,
   },
 
-  modules: ["@nuxt/ui", "nuxt-swiper", "@nuxtjs/i18n", "@nuxt/image"],
+  modules: ["@nuxt/ui", "nuxt-swiper", "@nuxtjs/i18n", "@nuxt/image", "@nuxt/content"],
 
   // "~/assets/css/reset.css",
   css: [ "~/assets/css/main.scss"],

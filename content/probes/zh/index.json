@@ -1,0 +1,149 @@
+{
+  "product": [
+    {
+      "to": "/probes/400mini",
+      "align": "left",
+      "title": "HL-OPG400 Mini（高精版）",
+      "image": "images/probes/400mini.png",
+      "features": [
+        {
+          "name": "产品优势",
+          "description": "传输效率快、通用互换性强、体积小、高精度（≤1μm）",
+          "icon": "i-heroicons-hand-thumb-up"
+        },
+        {
+          "name": "启动方式",
+          "description": "通电代码启动/接收两种红外线调制信号启动测头",
+          "icon": "i-heroicons-play"
+        },
+        {
+          "name": "信号传输",
+          "description": "测头与接收器采用红外线编码信号传输，抗干扰与震动；",
+          "icon": "i-heroicons-rss-solid"
+        },
+        {
+          "name": "使用领域",
+          "description": "适用于各种系统主轴结构加工中心及各种产品（如：手机，电脑，电子，通迅，汽车，模具等）",
+          "icon": "i-heroicons-globe-alt"
+        }
+      ]
+    },
+    {
+      "to": "/probes/400ms",
+      "align": "right",
+      "title": "BHL-OPG400mS（普通版）",
+      "image": "images/probes/400ms.png",
+      "features": [
+        {
+          "name": "产品优势",
+          "description": "传输效率快，通用互换性强，体积小，高精度（≤1μm）",
+          "icon": "i-heroicons-hand-thumb-up"
+        },
+        {
+          "name": "启动方式",
+          "description": "通电代码启动/接收两种红外线调制信号启动测头",
+          "icon": "i-heroicons-play"
+        },
+        {
+          "name": "信号传输",
+          "description": "测头与接收器采用红外线编码信号传输，抗干扰",
+          "icon": "i-heroicons-rss-solid"
+        },
+        {
+          "name": "使用领域",
+          "description": "适用于各种系统主轴结构加工中心及各种产品（如：手机，电脑，电子，通迅，汽车，模具等）",
+          "icon": "i-heroicons-globe-alt"
+        }
+      ]
+    }
+  ],
+  "compares": {
+    "columns": [
+      {
+        "key": "contrastItem",
+        "label": "对比项目"
+      },
+      {
+        "key": "competingBrand",
+        "label": "主要竞争品牌(DS )"
+      },
+      {
+        "key": "bhl",
+        "label": "BHL测头"
+      },
+      {
+        "key": "result",
+        "label": "结果"
+      }
+    ],
+    "items": [
+      {
+        "contrastItem": "精度",
+        "competingBrand": "≤0.001mm",
+        "bhl": "≤0.001mm",
+        "result": { "value": "相同" }
+      },
+      {
+        "contrastItem": "测量速度",
+        "competingBrand": "11m/min",
+        "bhl": "9m/min（升级款更快）",
+        "result": { "value": "相同" }
+      },
+      {
+        "contrastItem": "传输方式",
+        "competingBrand": "红外线",
+        "bhl": "红外线",
+        "result": { "value": "相同" }
+      },
+      {
+        "contrastItem": "传输开关",
+        "competingBrand": "手动-M码启动/关闭",
+        "bhl": "自动（节能省电）",
+        "result": { "value": "BHL优于DS", "class": "text-red-500" }
+      },
+      {
+        "contrastItem": "电池寿命",
+        "competingBrand": "90天",
+        "bhl": "≧120天",
+        "result": { "value": "BHL优于DS", "class": "text-red-500" }
+      },
+      {
+        "contrastItem": "探头开关",
+        "competingBrand": "需要",
+        "bhl": "自动",
+        "result": { "value": "BHL优于DS", "class": "text-red-500" }
+      },
+      {
+        "contrastItem": "系统信号发射角度",
+        "competingBrand": "120度",
+        "bhl": "120度",
+        "result": { "value": "相同" }
+      },
+
+      {
+        "contrastItem": "电池型号",
+        "competingBrand": "通用",
+        "bhl": "通用",
+        "result": { "value": "相同" }
+      },
+      {
+        "contrastItem": "传输距离",
+        "competingBrand": "5米",
+        "bhl": "2~5米可自行控制（可防干扰",
+        "result": { "value": "BHL优于DS", "class": "text-red-500" }
+      },
+      {
+        "contrastItem": "产品寿命",
+        "competingBrand": "≧1000万次",
+        "bhl": "≧1000万次",
+        "result": { "value": "相同" }
+      },
+      {
+        "contrastItem": "其它",
+        "competingBrand": "相同",
+        "bhl": "相同",
+        "result": { "value": "相同" }
+      }
+    ]
+  }
+}

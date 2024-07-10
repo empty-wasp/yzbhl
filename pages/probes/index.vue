@@ -5,7 +5,7 @@
       :description="$t('probe.header.description')"
     />
     <AppProductCard
-      v-for="(item, index) in sections"
+      v-for="(item, index) in result.product"
       :key="index"
       :to="item.to"
       :title="item.title"
@@ -20,7 +20,10 @@
 
     <AppLandingSection :title="$t('probe.compare')">
       <UCard>
-        <UTable :rows="tables.items" :columns="tables.columns">
+        <UTable
+          :rows="result.compares.items"
+          :columns="result.compares.columns"
+        >
           <template #result-data="{ row }">
             {{ row.result.value }}
           </template>
@@ -33,18 +36,7 @@
 <script setup lang="ts">
 useSeoMeta({ title: "BHL测头" });
 
-import { probes, compares } from "@/lang/probes";
-const { locale } = useI18n();
-const sections: any = ref([]);
-const tables: any = ref([]);
-watch(
-  () => locale.value,
-  (v: string) => {
-    sections.value = probes[v];
-    tables.value = compares[v];
-  },
-  { immediate: true }
-);
+const { result }: any = await useAsyncConfig("probes");
 
 const ui = {
   wrapper: "mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl",

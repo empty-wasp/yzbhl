@@ -1,14 +1,16 @@
 <template>
   <div>
-    <AppHeader />
+    <AppHeader :menus="result.menus" />
     <AppMain><slot /></AppMain>
 
-    <AppFooter />
-    
+    <AppFooter :blogroll="result.blogroll" />
+
     <UNotifications />
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { result }: any = await useAsyncConfig("layout");
+</script>
 
 <style scoped></style>

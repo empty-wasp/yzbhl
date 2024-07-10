@@ -21,17 +21,12 @@
 </template>
 
 <script setup lang="ts">
-import { timeline } from "@/lang/about";
-const { locale } = useI18n();
-const timelines: any = ref([]);
-
-watch(
-  () => locale.value,
-  (v: string) => {
-    timelines.value = timeline[v];
+const props = defineProps({
+  timelines: {
+    type: Array<any>,
+    default: () => [],
   },
-  { immediate: true }
-);
+});
 
 const wrapperBefore = "before:w-2 before:h-full";
 const tipBefore = "lg:before:hidden ulg:after:hidden";

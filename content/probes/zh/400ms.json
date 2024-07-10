@@ -1,0 +1,113 @@
+{
+  "name": "BHL-OPG400mS（普通版）",
+  "image": "images/probes/400ms.png",
+  "introduces": [
+    {
+      "title": "功能",
+      "features": [
+        "提升效率，实现自动分中找正及设定偏置值；",
+        "时时在机测量，二维尺寸测量及自动补尝（内外孔/矩形/位置等）；",
+        "可靠合理使用机床，对机床精度效验；",
+        "自动深度测量，有效补正刀具长度提升良率减少接痕断差；",
+        "安全节能，实现电池报警自动暂停/自动休眠；",
+        "日常抗碰击能力。"
+      ]
+    },
+    {
+      "title": "特点",
+      "features": [
+        "传输效率快，通用互换性强，体积小，高精度（≤1μm）",
+        "通电代码启动/接收两种红外线调制信号启动测头；",
+        "测头与接收器采用红外线编码信号传输，抗干扰；",
+        "使用范围广，适用于各种系统主轴结构加工中心及各种产品（如：手机，电脑，电子，通迅，汽车，模具等）"
+      ]
+    },
+    {
+      "title": "参数",
+      "features": [
+        "测针触发方向：±X, ±Y, +Z .",
+        "测针各向触发保护行程：XY±15°，Z+5mm.",
+        "测针各向触发力：XY=1.0N,Z=8.0N.",
+        "cnc机床实际测量任意单向触发重复（2σ）精度：≤10μm.",
+        "红外线信号传输范围360°：≤5m.",
+        "电池寿命测头连续1000万次可正常使用。",
+        "防护等级IP67"
+      ]
+    }
+  ],
+  "attachments": {
+    "columns": [
+      {
+        "key": "name",
+        "label": "名称"
+      },
+      {
+        "key": "diameter",
+        "label": "测球直径（mm）"
+      },
+      {
+        "key": "materials",
+        "label": "测杆材料"
+      },
+      {
+        "key": "totalLength",
+        "label": "总长度（mm）"
+      },
+      {
+        "key": "effectiveLength",
+        "label": "有效长度(mm)"
+      }
+    ],
+    "items": [
+      {
+        "name": "直测针",
+        "diameter": "1.0红宝石",
+        "materials": "硬质合金",
+        "totalLength": "20",
+        "effectiveLength": "18"
+      },
+      {
+        "name": "直测针",
+        "diameter": "2.0红宝石",
+        "materials": "硬质合金",
+        "totalLength": "20",
+        "effectiveLength": "18"
+      },
+      {
+        "name": "直测针",
+        "diameter": "5.0红宝石",
+        "materials": "不锈钢",
+        "totalLength": "50/70/90",
+        "effectiveLength": "35/60/80"
+      },
+      {
+        "name": "直测针",
+        "diameter": "6.0红宝石",
+        "materials": "不锈钢",
+        "totalLength": "100",
+        "effectiveLength": "85"
+      },
+      {
+        "name": "柱形测针",
+        "diameter": "1.0",
+        "materials": "硬质合金",
+        "totalLength": "20",
+        "effectiveLength": "10"
+      },
+      {
+        "name": "柱形测针",
+        "diameter": "3.0",
+        "materials": "硬质合金",
+        "totalLength": "30",
+        "effectiveLength": "20"
+      },
+      {
+        "name": "加长杆",
+        "diameter": "--",
+        "materials": "陶瓷",
+        "totalLength": "30/50/100",
+        "effectiveLength": "--"
+      }
+    ]
+  }
+}

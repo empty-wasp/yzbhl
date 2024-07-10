@@ -1,8 +1,8 @@
 <template>
-  <UiHeader :links="links">
+  <UiHeader :links="menus">
     <template #logo>
       <div class="flex items-center">
-        <UAvatar size="lg" src="images/logo.png" alt="Logo" />
+        <NuxtImg src="images/logo.png" alt="Logo" class="w-12" />
         <!-- <span class="text-2xl">BHL</span> -->
       </div>
     </template>
@@ -10,9 +10,10 @@
       <USelect
         class="font-semibold"
         size="sm"
-        :options="langs"
+        v-model="language"
+        :options="options"
         variant="none"
-        @change="setLocaleFn"
+        @change="setLanguage"
       />
       <UButton
         :label="$t('header.contact')"
@@ -25,30 +26,14 @@
 </template>
 
 <script setup lang="ts">
-const { setLocale, t } = useI18n();
+const props = defineProps({
+  menus: {
+    type: Array<any>,
+    default: () => [],
+  },
+});
 
-const langs = ["中文", "English"];
-const linkMap = reactive<any[]>([
-  {
-    label: computed(() => t("header.menu.about")), // t("header.menu.about")
-    to: "/about",
-  },
-  {
-    label: computed(() => t("header.menu.probes")),
-    to: "/probes",
-  },
-  {
-    label: computed(() => t("header.menu.join")),
-    to: "/join",
-  },
-]);
-const links = ref<any>(linkMap);
-
-const setLocaleFn = (v: string) => {
-  const langMap: any = { ["中文"]: "zh", ["English"]: "en" };
-  setLocale(langMap[v]);
-  links.value = linkMap;
-};
+const { setLanguage, language, options } = useLanguage();
 </script>
 
 <style scoped></style>

@@ -5,7 +5,7 @@
       </div>
   
       <div :class="ui.center">
-        <div v-for="(link, index) in links" :key="index">
+        <div v-for="(link, index) in links" :key="index" class="max-w-80">
           <h3 :class="ui.label">
             {{ link.label }}
           </h3>
@@ -52,7 +52,7 @@
     right: "mt-10 xl:mt-0",
     label: "text-sm/6 font-semibold text-gray-900 dark:text-white",
     list: "mt-6 space-y-4",
-    base: "text-sm relative",
+    base: "text-sm relative text-left",
     active: "text-gray-900 dark:text-white font-medium",
     inactive:
       "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white",

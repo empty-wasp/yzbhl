@@ -1,0 +1,113 @@
+{
+  "name": "BHL-OPG400mS (general)",
+  "image": "images/probes/400ms.png",
+  "introduces": [
+    {
+      "title": "Function",
+      "features": [
+        "Improving efficiency, automatically achieving centering and alignment, and setting deviation value",
+        "Achieving on-machine measurement, 2D dimensional measurement and automatic compensation in real time (inner and outer bore/ rectangle/ position)",
+        "Achieving a reliable and reasonable use of lathe, and calibrating the precision of lathe",
+        "Automatically measuring the depth, effectively correcting the tool length, improving the yield and reducing lapping defect mismatch",
+        "Featuring a high safety and energy saving, and realizing auto pause/ auto sleep in case of the battery alarm",
+        "Routine collision resistance."
+      ]
+    },
+    {
+      "title": "Features",
+      "features": [
+        "It features a fast transmission efficiency, a powerful compatibility and interchangeability, a small size and a high precision (≤1μm)",
+        "Probe start-up mode: The probe is started in two ways including using power-on code and receiving two kinds of infrared modulating signals",
+        "Infrared coding is used to transmit signals between the probe and the receiver. It is resistant to interference",
+        "Being widely applicable, it can be used in various system spindle processing centers and various products (such as mobile phones, computers, electronics, communication, automobiles and molds)"
+      ]
+    },
+    {
+      "title": "Parameters",
+      "features": [
+        "Measuring-pin triggering direction: ±X, ±Y, +Z",
+        "Protection stroke of the measuring pin triggering in all directions: XY±15°, Z+5mm",
+        "Triggering force for the measuring pin in all directions: XY=1.0N, Z=8.0N",
+        " Repeated (2σ) precision for arbitrary one-way triggering of CNC lathe in actual measurement: ≤10μm",
+        "Transmission range of infrared signals in 360 degrees: ≤5m",
+        "Battery life: The probe can function normally for consecutive 10 million times",
+        "Protection grade: IP67"
+      ]
+    }
+  ],
+  "attachments": {
+    "columns": [
+      {
+        "key": "name",
+        "label": "Name"
+      },
+      {
+        "key": "diameter",
+        "label": "Diameter of Measuring Ball (mm)"
+      },
+      {
+        "key": "materials",
+        "label": "Material of Measuring Bar "
+      },
+      {
+        "key": "totalLength",
+        "label": "Total Length (mm)"
+      },
+      {
+        "key": "effectiveLength",
+        "label": "Effective Length (mm)"
+      }
+    ],
+    "items": [
+      {
+        "name": "Straight measuring pin",
+        "diameter": "1.0 ruby",
+        "materials": "Hard alloy",
+        "totalLength": "20",
+        "effectiveLength": "18"
+      },
+      {
+        "name": "Straight measuring pin",
+        "diameter": "2.0 ruby",
+        "materials": "Hard alloy",
+        "totalLength": "20",
+        "effectiveLength": "18"
+      },
+      {
+        "name": "Straight measuring pin",
+        "diameter": "5.0 ruby",
+        "materials": "Stainless steel",
+        "totalLength": "50/70/90",
+        "effectiveLength": "35/60/80"
+      },
+      {
+        "name": "Straight measuring pin",
+        "diameter": "6.0 ruby",
+        "materials": "Stainless steel",
+        "totalLength": "100",
+        "effectiveLength": "85"
+      },
+      {
+        "name": "Column measuring pin",
+        "diameter": "1.0",
+        "materials": "Hard alloy",
+        "totalLength": "20",
+        "effectiveLength": "10"
+      },
+      {
+        "name": "Column measuring pin",
+        "diameter": "3.0",
+        "materials": "Hard alloy",
+        "totalLength": "30",
+        "effectiveLength": "20"
+      },
+      {
+        "name": "Lengthening bar",
+        "diameter": "--",
+        "materials": "Ceramics",
+        "totalLength": "30/50/100",
+        "effectiveLength": "--"
+      }
+    ]
+  }
+}

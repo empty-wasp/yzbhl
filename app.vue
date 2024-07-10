@@ -1,12 +1,15 @@
 <script setup lang="ts">
+const { t } = useI18n();
+
 useHead({
   meta: [{ name: "viewport", content: "width=device-width, initial-scale=1" }],
   link: [{ rel: "icon", href: "/favicon.ico" }],
-  htmlAttrs: { lang: "zh" },
+  // htmlAttrs: { lang: "zh" },
 });
 
+const companyName = computed(() => t("companyName"));
 useSeoMeta({
-  titleTemplate: "%s - BHL",
+  titleTemplate: "%s - " + companyName.value,
 });
 </script>
 <template>
