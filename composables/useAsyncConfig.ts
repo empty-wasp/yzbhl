@@ -7,12 +7,12 @@ export const useAsyncConfig = async (prefix: string, suffix?: string) => {
         `/${prefix}/${lang.value}${suffix ? "/" + suffix : ""}`
       ).findOne()
   );
-  if (!result.value) {
-    throw createError({
-      statusCode: 404,
-      statusMessage: "Page not found",
-      fatal: true,
-    });
-  }
+  // if (!result.value) {
+  //   throw createError({
+  //     statusCode: 404,
+  //     statusMessage: "Page not found",
+  //     fatal: true,
+  //   });
+  // }
   return { result };
 };
