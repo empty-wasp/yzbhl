@@ -20,8 +20,8 @@ export default defineNuxtConfig({
   // app: {
   //   baseURL: "/yzbhl/",
   // },
-  nitro: {
-    compressPublicAssets: true,
-  },
+  // nitro: {
+  //   compressPublicAssets: true,
+  // },
   content: { documentDriven: true },
 });
