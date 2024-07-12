@@ -28,7 +28,10 @@ const items = ["images/banner1.png", "images/banner2.png"];
     >
       <!-- <ImagePlaceholder /> -->
        <NuxtImg src="/images/bg.png" class="rounded-2xl" />
+     
     </AppLandingSection>
+
+    <img src="/images/bg.png" class="rounded-2xl" />
   </div>
 </template>
 <style scoped></style>
