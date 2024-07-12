@@ -31,8 +31,8 @@ jobs:
 
       - name: Install Dependencies
         run: pnpm install
-      - name: Generate Static Site
-        run: pnpm generate --dotenv .env.uat
+      - name: Build Static Site
+        run: pnpm build --dotenv .env.uat
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
