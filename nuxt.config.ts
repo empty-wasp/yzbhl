@@ -24,9 +24,12 @@ export default defineNuxtConfig({
   // nitro: {
   //   compressPublicAssets: true,
   // },
-  content: {
-    api: {
-      baseURL: "/api/content",
-    },
+  // content: {
+  //   api: {
+  //     baseURL: "/api/content",
+  //   },
+  // },
+  experimental: {
+    payloadExtraction: false,
   },
 });
