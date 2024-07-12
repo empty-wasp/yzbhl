@@ -1,9 +1,3 @@
-name: Deploy to GitHub Pages
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main# https://github.com/actions/deploy-pages#usage
 name: Release to GitHub Pages
 on:
   workflow_dispatch:
