@@ -31,13 +31,13 @@ jobs:
 
       - name: Install Dependencies
         run: pnpm install
-      - name: Build Static Site
-        run: pnpm build --dotenv .env.uat --preset github_pages
+      - name: Generate Static Site
+        run: pnpm generate --dotenv .env.uat
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .output/public
+          path: ./.output/public
 
   deploy:
     environment:
