@@ -14,7 +14,7 @@
       class="group"
     >
       <div :class="ui.image.wrapper">
-        <NuxtImg :src="item.image" :alt="item.title" :class="ui.image.base" />
+        <img :src="item.image" :alt="item.title" :class="ui.image.base" />
       </div>
     </AppProductCard>
 

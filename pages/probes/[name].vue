@@ -2,7 +2,7 @@
   <div v-if="result" :class="ui.wrapper">
     <UiPageHeader :title="result.name" />
     <div :class="ui.image.wrapper">
-      <NuxtImg :src="result.image" :alt="result.name" :class="ui.image.base" />
+      <img :src="result.image" :alt="result.name" :class="ui.image.base" />
     </div>
 
     <UContainer :class="ui.introduce">

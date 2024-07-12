@@ -2,7 +2,7 @@
   <UiHeader :links="menus">
     <template #logo>
       <div class="flex items-center">
-        <NuxtImg src="images/logo.png" alt="Logo" class="w-12" />
+        <img src="images/logo.png" alt="Logo" class="w-12" />
         <!-- <span class="text-2xl">BHL</span> -->
       </div>
     </template>

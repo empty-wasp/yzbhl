@@ -7,7 +7,7 @@
       :description="$t('about.description')"
     >
 
-      <NuxtImg src="images/bg.png" class="rounded-2xl" />
+      <img src="images/bg.png" class="rounded-2xl" />
 
     </AppLandingSection>
 
@@ -26,7 +26,7 @@
         >
           <div class="bg-gray-100/50 dark:bg-gray-800/50"></div>
           <UCard>
-            <NuxtImg :src="`images/patent/patent${i}.png`" />
+            <img :src="`images/patent/patent${i}.png`" />
           </UCard>
         </div>
       </UiPageColumns>
