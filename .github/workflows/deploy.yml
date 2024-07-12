@@ -8,8 +8,8 @@ name: Release to GitHub Pages
 on:
   workflow_dispatch:
   push:
-    branches:
-      # - release
+    branches: [main]
+
 jobs:
   build:
     runs-on: ubuntu-latest

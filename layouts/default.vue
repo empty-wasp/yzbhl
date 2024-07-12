@@ -1,16 +1,16 @@
 <template>
-  <div v-if="result">
-    <AppHeader :menus="result.menus" />
+  <div>
+    <!-- <AppHeader v-if="result" :menus="result.menus" /> -->
     <AppMain><slot /></AppMain>
 
-    <AppFooter :blogroll="result.blogroll" />
+    <!-- <AppFooter v-if="result" :blogroll="result.blogroll" /> -->
 
     <UNotifications />
   </div>
 </template>
 
 <script setup lang="ts">
-const { result }: any = await useAsyncConfig("layout");
+// const { result }: any = await useAsyncConfig("layout");
 </script>
 
 <style scoped></style>
