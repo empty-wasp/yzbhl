@@ -27,7 +27,7 @@ const items = ["images/banner1.png", "images/banner2.png"];
       align="left"
     >
       <!-- <ImagePlaceholder /> -->
-       <NuxtImg src="images/bg.png" class="rounded-2xl" />
+       <NuxtImg src="/images/bg.png" class="rounded-2xl" />
     </AppLandingSection>
   </div>
 </template>
