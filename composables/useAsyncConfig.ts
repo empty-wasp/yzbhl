@@ -4,7 +4,7 @@ export const useAsyncConfig = async (prefix: string, suffix?: string) => {
     `${prefix}/${lang.value}${suffix ? "/" + suffix : ""}`,
     () =>
       queryContent(
-        `${prefix}/${lang.value}${suffix ? "/" + suffix : ""}`
+        `/${prefix}/${lang.value}${suffix ? "/" + suffix : ""}`
       ).findOne()
   );
   if (!result.value) {

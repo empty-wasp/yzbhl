@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   devtools: {
     enabled: false,
   },
-  
-  ssr: false,
+
+  // ssr: false,
 
   modules: [
     "@nuxt/ui",
