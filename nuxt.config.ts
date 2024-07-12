@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   devtools: {
     enabled: false,
   },
-  ssr: false,
-  spaLoadingTemplate: true,
+  // ssr: false,
+  // spaLoadingTemplate: true,
 
   modules: [
     "@nuxt/ui",
@@ -23,5 +23,9 @@ export default defineNuxtConfig({
   // nitro: {
   //   compressPublicAssets: true,
   // },
-  content: { documentDriven: true },
+  content: {
+    api: {
+      baseURL: "/api/content",
+    },
+  },
 });
