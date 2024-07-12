@@ -32,7 +32,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
       - name: Build Static Site
-        run: pnpm build --dotenv .env.uat
+        run: pnpm build --dotenv .env.uat --preset github_pages
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
