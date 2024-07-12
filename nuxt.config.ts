@@ -3,8 +3,8 @@ export default defineNuxtConfig({
   devtools: {
     enabled: false,
   },
-  // ssr: false,
-  // spaLoadingTemplate: true,
+  
+  ssr: false,
 
   modules: [
     "@nuxt/ui",
@@ -14,12 +14,13 @@ export default defineNuxtConfig({
     "@nuxt/content",
   ],
 
-  // "~/assets/css/reset.css",
   css: ["~/assets/css/main.scss"],
 
   // app: {
   //   baseURL: "/yzbhl/",
   // },
+
+  // 压缩
   // nitro: {
   //   compressPublicAssets: true,
   // },
