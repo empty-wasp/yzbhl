@@ -48,7 +48,7 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          source: dist,.output,.nginx,docker-compose.yml
+          source: .output,.nginx,docker-compose.yml
           target: /projects/ew_yzbhl_container/
 
       - name: Update the docker server and start

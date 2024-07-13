@@ -9,6 +9,6 @@ services:
       # - 443:443/tcp
     restart: always
     volumes:
-      - ./dist:/usr/share/nginx/html/dist
+      - ./.output/public:/usr/share/nginx/html/dist
       - ./.nginx/conf.d:/etc/nginx/conf.d
       - ./.nginx/cert:/etc/nginx/cert
