@@ -1,0 +1,63 @@
+name: GitHub Actions Release
+run-name: 测速环境部署流水 ${{ github.run_number }} 🚀
+
+on:
+  push:
+    branches: ["release"]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Enable pnpm
+        run: corepack enable
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Generate Static Site
+        run: pnpm generate
+
+      - name: stop the docker container
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            cd /projects/ew_yzbhl_container 2>/dev/null || echo Unknown
+            echo "🎉 删 🎉 除 🎉 容 🎉 器 🎉"
+            docker-compose rm -s -f 2>/dev/null  || echo Unknown
+            docker-compose ps 2>/dev/null || echo Unknown
+            cd /projects && rm -rf /projects/ew_yzbhl_container 2>/dev/null || echo Unknown
+            echo "🎉 删 🎉 除 🎉 镜 🎉 像 🎉"
+            docker rmi -f ew_yzbhl_image 2>/dev/null || echo Unknown
+            docker images 2>/dev/null || echo Unknown
+
+      - name: Copy files to docker server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          source: dist,.nginx,docker-compose.yml
+          target: /projects/ew_yzbhl_container/
+
+      - name: Update the docker server and start
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            cd /projects/ew_yzbhl_container
+            docker-compose up -d
+            docker ps

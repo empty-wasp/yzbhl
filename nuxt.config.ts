@@ -4,7 +4,7 @@ export default defineNuxtConfig({
     enabled: false,
   },
 
-  // ssr: false,
+  ssr: false,
 
   modules: [
     "@nuxt/ui",

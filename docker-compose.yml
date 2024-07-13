@@ -1,0 +1,14 @@
+version: "3"
+services:
+  nginx:
+    image: ew_yzbhl_image
+    build: ./.nginx
+    container_name: ew_yzbhl_container
+    ports:
+      - 3214:80/tcp
+      # - 443:443/tcp
+    restart: always
+    volumes:
+      - ./dist:/usr/share/nginx/html/dist
+      - ./.nginx/conf.d:/etc/nginx/conf.d
+      - ./.nginx/cert:/etc/nginx/cert

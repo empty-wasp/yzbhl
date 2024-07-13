@@ -14,7 +14,7 @@ const props = defineProps({
     <template #top>
       <UiFooterColumns :links="blogroll" :ui="{ center: 'auto-cols-auto' }">
         <template #left>
-          <img class="w-36" src="images/logo@2.png" />
+          <img class="w-36" src="/images/logo@2.png" />
         </template>
       </UiFooterColumns>
     </template>
