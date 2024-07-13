@@ -24,8 +24,10 @@ jobs:
         run: pnpm install
 
       - name: Generate Static Site
-        run: pnpm generate & ls
+        run: pnpm generate
 
+      - name: view file
+        run: ls
       # - name: stop the docker container
       #   uses: appleboy/ssh-action@master
       #   with:
