@@ -4,7 +4,7 @@
       "to": "/probes/400mini",
       "align": "left",
       "title": "HL-OPG400 Mini（高精版）",
-      "image": "images/probes/400mini.png",
+      "image": "/images/probes/400mini.png",
       "features": [
         {
           "name": "产品优势",
@@ -32,7 +32,7 @@
       "to": "/probes/400ms",
       "align": "right",
       "title": "BHL-OPG400mS（普通版）",
-      "image": "images/probes/400ms.png",
+      "image": "/images/probes/400ms.png",
       "features": [
         {
           "name": "产品优势",

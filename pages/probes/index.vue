@@ -36,7 +36,15 @@
 <script setup lang="ts">
 useSeoMeta({ title: "BHL测头" });
 
-const { result }: any = await useAsyncConfig("probes");
+import zh from "@/content/probes/zh/index.json";
+import en from "@/content/probes/en/index.json";
+
+const lang: any = useCookie("lang");
+
+const data: any = { zh, en };
+const result = ref(data[lang.value]);
+
+// const { result }: any = await useAsyncConfig("probes");
 
 const ui = {
   wrapper: "mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl",

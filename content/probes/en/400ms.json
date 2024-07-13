@@ -1,6 +1,6 @@
 {
   "name": "BHL-OPG400mS (general)",
-  "image": "images/probes/400ms.png",
+  "image": "/images/probes/400ms.png",
   "introduces": [
     {
       "title": "Function",

@@ -30,7 +30,19 @@
 <script setup lang="ts">
 const route = useRoute();
 const { name }: any = route.params;
-const { result }: any = await useAsyncConfig("probes", name);
+
+import zh_400mini from "@/content/probes/zh/400mini.json";
+import zh_400ms from "@/content/probes/zh/400ms.json";
+
+import en_400mini from "@/content/probes/en/400mini.json";
+import en_400ms from "@/content/probes/en/400ms.json";
+
+const lang: any = useCookie("lang");
+
+const data: any = { zh_400mini, zh_400ms, en_400mini, en_400ms };
+const result = ref(data[`${lang.value}_${name}`]);
+
+// const { result }: any = await useAsyncConfig("probes", name);
 
 const ui = {
   wrapper: "mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl", // flex flex-col items-center

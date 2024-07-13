@@ -1,6 +1,6 @@
 {
   "name": "BHL-OPG400mS（普通版）",
-  "image": "images/probes/400ms.png",
+  "image": "/images/probes/400ms.png",
   "introduces": [
     {
       "title": "功能",

@@ -10,7 +10,12 @@
 </template>
 
 <script setup lang="ts">
-const { result }: any = await useAsyncConfig("layout");
+import zh from "@/content/layout/zh.json";
+import en from "@/content/layout/en.json";
+
+const lang: any = useCookie("lang");
+const data: any = { zh, en };
+const result = ref(data[lang.value]);
 </script>
 
 <style scoped></style>

@@ -1,6 +1,6 @@
 {
   "name": "HL-OPG400 Mini (high precision)",
-  "image": "images/probes/400mini.png",
+  "image": "/images/probes/400mini.png",
   "introduces": [
     {
       "title": "Function",

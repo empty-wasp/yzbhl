@@ -1,6 +1,6 @@
 {
   "name": "HL-OPG400 Mini（高精版）",
-  "image": "images/probes/400mini.png",
+  "image": "/images/probes/400mini.png",
   "introduces": [
     {
       "title": "功能",

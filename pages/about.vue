@@ -6,9 +6,7 @@
       :title="$t('companyName')"
       :description="$t('about.description')"
     >
-
       <img src="/images/bg.png" class="rounded-2xl" />
-
     </AppLandingSection>
 
     <AppLandingSection id="timeline" :title="$t('about.timeline')">
@@ -37,7 +35,15 @@
 <script setup lang="ts">
 useSeoMeta({ title: "关于BHL" });
 
-const { result }: any = await useAsyncConfig("about");
+import zh from "@/content/about/zh.json";
+import en from "@/content/about/en.json";
+
+const lang: any = useCookie("lang");
+
+const data: any = { zh, en };
+const result = ref(data[lang.value]);
+
+// const { result }: any = await useAsyncConfig("about");
 
 const patentList = Array.from(Array(12).keys(), (n) => n + 1);
 const ui = {
