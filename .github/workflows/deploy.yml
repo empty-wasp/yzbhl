@@ -15,15 +15,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: "20"
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 9.0.4
-
-      # - name: Enable pnpm
-      #   run: corepack enable
+      - name: Enable pnpm
+        run: corepack enable
 
       - name: Install Dependencies
         run: pnpm install
@@ -53,7 +48,8 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          source: dist,.nginx,docker-compose.yml
+          # source: dist,.nginx,docker-compose.yml
+          source: /dist,/.nginx,/docker-compose.yml
           target: /projects/ew_yzbhl_container/
 
       - name: Update the docker server and start
