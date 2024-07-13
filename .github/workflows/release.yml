@@ -3,7 +3,7 @@ run-name: 测速环境部署流水 ${{ github.run_number }} 🚀
 
 on:
   push:
-    branches: ["test"]
+    branches: ["release"]
 
 jobs:
   build-and-deploy:
