@@ -50,7 +50,6 @@ jobs:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
-          # source: dist,.nginx,docker-compose.yml
           source: dist,.nginx,docker-compose.yml
           target: /projects/ew_yzbhl_container/
 
