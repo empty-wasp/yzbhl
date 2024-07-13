@@ -1,5 +1,5 @@
-name: GitHub Actions Testing
-run-name: 测速环境部署流水 ${{ github.run_number }} 🚀
+name: GitHub Actions Release
+run-name: 部署流水 ${{ github.run_number }} 🚀
 
 on:
   push:

@@ -24,6 +24,6 @@ ENV NODE_ENV production
 COPY .output ./.output
 COPY --from=install /app/node_modules ./node_modules
 
-CMD [ "npx", "nuxi" , "preview"]
+RUN npx nuxi preview
 
 RUN echo "🎉 部 🎉 署 🎉 成 🎉 功 🎉"
