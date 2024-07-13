@@ -1,9 +1,9 @@
 <template>
   <div>
-    <AppHeader v-if="result" :menus="result.menus" />
+    <AppHeader :menus="result.menus" />
     <AppMain><slot /></AppMain>
 
-    <AppFooter v-if="result" :blogroll="result.blogroll" />
+    <AppFooter :blogroll="result.blogroll" />
 
     <UNotifications />
   </div>

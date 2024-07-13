@@ -1,5 +1,5 @@
 <template>
-  <div v-if="result" :class="ui.wrapper">
+  <div :class="ui.wrapper">
     <AppLandingSection
       id="description"
       :ui="{ description: 'text-left whitespace-pre-wrap' }"

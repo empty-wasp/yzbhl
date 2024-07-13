@@ -12,3 +12,5 @@ services:
       - ./.output/public:/usr/share/nginx/html/dist
       - ./.nginx/conf.d:/etc/nginx/conf.d
       - ./.nginx/cert:/etc/nginx/cert
+
+

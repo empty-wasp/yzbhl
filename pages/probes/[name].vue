@@ -1,5 +1,5 @@
 <template>
-  <div v-if="result" :class="ui.wrapper">
+  <div :class="ui.wrapper">
     <UiPageHeader :title="result.name" />
     <div :class="ui.image.wrapper">
       <img :src="result.image" :alt="result.name" :class="ui.image.base" />

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="result" :class="ui.wrapper">
+  <div :class="ui.wrapper">
     <UiPageHeader
       :title="$t('probe.header.title')"
       :description="$t('probe.header.description')"
