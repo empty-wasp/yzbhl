@@ -1,7 +1,7 @@
 services:
   # api 镜像需要更新
   yzbhl-container:
-  image: yzbhl-container
+    image: yzbhl-container
     build: .
     ports:
       - 3000:3000
