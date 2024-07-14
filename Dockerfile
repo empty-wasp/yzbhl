@@ -24,6 +24,7 @@ ENV NODE_ENV production
 COPY .output ./.output
 COPY --from=install /app/node_modules ./node_modules
 
-RUN npx nuxi preview
+# RUN npx nuxi preview
+CMD [ "node", ".output/server/index.mjs" ]
 
 RUN echo "🎉 部 🎉 署 🎉 成 🎉 功 🎉"
