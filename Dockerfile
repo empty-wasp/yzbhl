@@ -1,6 +1,3 @@
-
-
-
 # 使用 Node.js 18 版本的官方镜像作为基础镜像
 FROM node:20-alpine AS base
 

@@ -14,8 +14,8 @@ module.exports = {
         env: {
           NODE_ENV: "production", // 环境变量
         },
-        error_file: "/data/logs/pm2-error.log", // 错误日志文件路径
-        out_file: "/data/logs/pm2-out.log", // 输出日志文件路径
+        error_file: "/app/logs/pm2-error.log", // 错误日志文件路径
+        out_file: "/app/logs/pm2-out.log", // 输出日志文件路径
         merge_logs: true, // 是否合并日志
         log_date_format: "YYYY-MM-DD HH:mm:ss", // 日志时间格式
         min_uptime: "60s", // 最小运行时间
