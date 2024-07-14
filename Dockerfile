@@ -10,11 +10,11 @@ COPY . /app
 # 创建 logs 目录
 RUN mkdir -p app/logs
 
-# 安装pm2
-RUN npm install -g pm2
-
 # 全局安装 pnpm
 RUN npm install -g pnpm
+
+# 安装pm2
+RUN pnpm install -g pm2
 
 # 使用 pnpm 安装项目依赖
 RUN pnpm install
