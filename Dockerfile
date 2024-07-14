@@ -31,7 +31,7 @@
 
 
 # 使用 Node.js 18 版本的官方镜像作为基础镜像
-FROM node:18
+FROM node:18-alpine AS base
 
 # 设置工作目录为 /data
 WORKDIR /app
