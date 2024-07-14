@@ -52,4 +52,4 @@ RUN npm install -g pnpm
 RUN pnpm install
 
 # 运行项目构建命令
-RUN pnpm run build
+# RUN pnpm run build
