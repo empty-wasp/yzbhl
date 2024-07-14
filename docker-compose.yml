@@ -1,18 +1,18 @@
-version: '3'
+version: "3"
 services:
   # api 镜像需要更新
-  yzbhl:
-    image: ew_yzbhl_image
+  yzbhl-container:
     build: .
-    container_name: ew_yzbhl_container
     ports:
       - 3000:3000
+    command: ["pm2-runtime", "start", "ecosystem.config.cjs"]
     restart: always
+    networks:
+      - app-network
 
   # nginx 镜像不需要更新
-  nginx:
-    image: yzbhl_nginx
-    build: ./.nginx
+  yzbhl-nginx-container:
+    image: nginx:latest
     container_name: yzbhl_nginx_container
     ports:
       - 3214:80/tcp
@@ -22,5 +22,10 @@ services:
       - ./.nginx/conf.d:/etc/nginx/conf.d
       # - ./.nginx/cert:/etc/nginx/cert
     depends_on:
-      - yzbhl
+      - yzbhl-container
+    networks:
+      - app-network
 
+networks:
+  app-network:
+    driver: bridge
