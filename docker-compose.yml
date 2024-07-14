@@ -1,4 +1,3 @@
-version: "3"
 services:
   # api 镜像需要更新
   yzbhl-container:
@@ -7,8 +6,6 @@ services:
       - 3000:3000
     command: ["pm2-runtime", "start", "ecosystem.config.cjs"]
     restart: always
-    networks:
-      - app-network
 
   # nginx 镜像不需要更新
   yzbhl-nginx-container:
@@ -23,9 +20,3 @@ services:
       # - ./.nginx/cert:/etc/nginx/cert
     depends_on:
       - yzbhl-container
-    networks:
-      - app-network
-
-networks:
-  app-network:
-    driver: bridge
