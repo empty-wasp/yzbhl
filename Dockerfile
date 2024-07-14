@@ -1,4 +1,4 @@
-FROM node:18-alpine AS base
+FROM node:20 AS base
 
 # 安装依赖
 FROM base as install
