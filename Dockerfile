@@ -8,10 +8,10 @@ WORKDIR /app
 COPY . /app
 
 # 创建 logs 目录
-RUN mkdir -p data/logs
+RUN mkdir -p app/logs
 
 # 安装pm2
-RUN npm install pm2 -g
+RUN npm install -g pm2
 
 # 全局安装 pnpm
 RUN npm install -g pnpm
