@@ -1,6 +1,9 @@
 # 使用 Node.js 18 版本的官方镜像作为基础镜像
 FROM node:20-alpine AS base
 
+
+RUN apk add --no-cache libc6-compat
+
 # 设置工作目录为 /data
 WORKDIR /app
 
@@ -11,13 +14,14 @@ COPY . /app
 RUN mkdir -p app/logs
 
 # 全局安装 pnpm
-RUN npm install -g pnpm
+# RUN npm install -g pnpm
+RUN yarn global add pnpm
 
 # 安装pm2
 RUN pnpm install -g pm2
 
 # 使用 pnpm 安装项目依赖
-RUN pnpm install
+RUN pnpm install --frozen-lockfile
 
 # 运行项目构建命令
 # RUN pnpm run build
