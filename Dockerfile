@@ -17,11 +17,10 @@ RUN mkdir -p data/logs
 RUN npm install pm2 -g
 
 # 全局安装 pnpm
-# RUN npm install -g pnpm
-RUN yarn global add pnpm && pnpm i;
+RUN npm install -g pnpm
 
 # 使用 pnpm 安装项目依赖
-# RUN pnpm install
+RUN pnpm install
 
 # 运行项目构建命令
 # RUN pnpm run build
