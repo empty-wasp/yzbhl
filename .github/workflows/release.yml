@@ -33,11 +33,11 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd /projects/ew_yzbhl_container 2>/dev/null || echo Unknown
+            cd /items/ew_yzbhl_container 2>/dev/null || echo Unknown
             echo "🎉 删 🎉 除 🎉 容 🎉 器 🎉"
             docker-compose rm -s -f 2>/dev/null  || echo Unknown
             docker-compose ps 2>/dev/null || echo Unknown
-            cd /projects && rm -rf /projects/ew_yzbhl_container 2>/dev/null || echo Unknown
+            cd /items && rm -rf /items/ew_yzbhl_container 2>/dev/null || echo Unknown
             echo "🎉 删 🎉 除 🎉 镜 🎉 像 🎉"
             docker rmi -f ew_yzbhl_image 2>/dev/null || echo Unknown
             docker images 2>/dev/null || echo Unknown
@@ -49,7 +49,7 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           source: .output,.nginx,pnpm-lock.yaml,package.json,docker-compose.yml,Dockerfile,ecosystem.config.cjs
-          target: /projects/ew_yzbhl_container/
+          target: /items/ew_yzbhl_container/
 
       - name: Update the docker server and start
         uses: appleboy/ssh-action@master
@@ -58,6 +58,6 @@ jobs:
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
-            cd /projects/ew_yzbhl_container
-            docker-compose up -d
+            cd /items/ew_yzbhl_container
+            docker compose up -d
             docker ps

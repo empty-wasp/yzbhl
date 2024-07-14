@@ -15,7 +15,7 @@ services:
     image: nginx:latest
     container_name: yzbhl_nginx_container
     ports:
-      - 3214:80/tcp
+      - 80:80/tcp
       # - 3215:443/tcp
     restart: always
     volumes:
