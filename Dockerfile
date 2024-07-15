@@ -1,5 +1,5 @@
 # 使用 Node.js 20 版本的官方镜像作为基础镜像
-FROM node:20-alpine AS base
+FROM node:20
 
 # RUN apk add --no-cache libc6-compat
 
