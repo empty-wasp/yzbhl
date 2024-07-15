@@ -1,5 +1,5 @@
 # 使用 Node.js 20 版本的官方镜像作为基础镜像
-FROM node:20
+FROM node:20-alpine
 
 # RUN apk add --no-cache libc6-compat
 
@@ -12,7 +12,7 @@ COPY . /app
 # 创建 logs 目录
 RUN mkdir -p app/logs
 
-RUN npm cache clean --force 
+
 RUN npm config set strict-ssl false
 
 # 全局安装 pnpm
