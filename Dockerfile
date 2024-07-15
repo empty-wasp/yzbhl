@@ -13,14 +13,13 @@ COPY . /app
 RUN mkdir -p app/logs
 
 # 全局安装 pnpm
-# RUN npm install -g pnpm
-# RUN yarn global add pnpm
+RUN npm install -g pnpm --registry=https://registry.npm.taobao.org
 
 # 安装pm2
-RUN yarn global add pm2
+RUN npm install -g pm2 --registry=https://registry.npm.taobao.org
 
 # 使用 pnpm 安装项目依赖
-RUN yarn
+RUN pnpm install
 
 # 运行项目构建命令
 # RUN pnpm run build
