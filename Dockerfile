@@ -12,11 +12,14 @@ COPY . /app
 # 创建 logs 目录
 RUN mkdir -p app/logs
 
-# 全局安装 pnpm
-RUN npm install -g pnpm --registry=https://registry.npm.taobao.org
+RUN npm cache clean --force 
+RUN npm config set strict-ssl false
 
+# 全局安装 pnpm
+RUN npm install -g pnpm 
+# --registry=https://registry.npm.taobao.org
 # 安装pm2
-RUN npm install -g pm2 --registry=https://registry.npm.taobao.org
+RUN npm install -g pm2 
 
 # 使用 pnpm 安装项目依赖
 RUN pnpm install
