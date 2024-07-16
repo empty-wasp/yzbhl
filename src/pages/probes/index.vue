@@ -39,10 +39,9 @@ useSeoMeta({ title: "BHL测头" });
 import zh from "@/content/probes/zh/index.json";
 import en from "@/content/probes/en/index.json";
 
-const lang: any = useCookie("lang");
-
+const { language } = useLanguage();
 const data: any = { zh, en };
-const result = ref(data[lang.value]);
+const result = ref(data[language.value]);
 
 // const { result }: any = await useAsyncConfig("probes");
 

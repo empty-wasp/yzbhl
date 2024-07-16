@@ -38,12 +38,10 @@ useSeoMeta({ title: "关于BHL" });
 import zh from "@/content/about/zh.json";
 import en from "@/content/about/en.json";
 
-const lang: any = useCookie("lang");
+const { language } = useLanguage();
 
 const data: any = { zh, en };
-const result = ref(data[lang.value]);
-
-// const { result }: any = await useAsyncConfig("about");
+const result = ref(data[language.value]);
 
 const patentList = Array.from(Array(12).keys(), (n) => n + 1);
 const ui = {

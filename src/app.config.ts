@@ -1,4 +1,5 @@
 export default defineAppConfig({
+  lang: "zh",
   ui: {
     primary: "blue",
     variables: {

@@ -10,10 +10,10 @@
       <USelect
         class="font-semibold"
         size="sm"
-        v-model="language"
+        v-model="lang"
         :options="options"
         variant="none"
-        @change="setLanguage"
+        @change="setLang"
       />
       <UButton
         :label="$t('header.contact')"
@@ -33,7 +33,7 @@ const props = defineProps({
   },
 });
 
-const { setLanguage, language, options } = useLanguage();
+const { setLang, lang, options } = useLanguage();
 </script>
 
 <style scoped></style>

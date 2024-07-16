@@ -37,10 +37,11 @@ import zh_400ms from "@/content/probes/zh/400ms.json";
 import en_400mini from "@/content/probes/en/400mini.json";
 import en_400ms from "@/content/probes/en/400ms.json";
 
-const lang: any = useCookie("lang");
+
+const { language } = useLanguage();
 
 const data: any = { zh_400mini, zh_400ms, en_400mini, en_400ms };
-const result = ref(data[`${lang.value}_${name}`]);
+const result = ref(data[`${language.value}_${name}`]);
 
 // const { result }: any = await useAsyncConfig("probes", name);
 
