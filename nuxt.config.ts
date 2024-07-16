@@ -1,10 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  srcDir:'src/',
   devtools: {
     enabled: false,
   },
-
-  // ssr: true,
 
   modules: [
     "@nuxt/ui",
@@ -16,19 +15,10 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/main.scss"],
 
-  // app: {
-  //   baseURL: "/yzbhl/",
-  // },
-
   // 压缩
-  // nitro: {
-  //   compressPublicAssets: true,
-  // },
-  // content: {
-  //   api: {
-  //     baseURL: "/api/content",
-  //   },
-  // },
+  nitro: {
+    compressPublicAssets: true,
+  },
   experimental: {
     payloadExtraction: false,
   },

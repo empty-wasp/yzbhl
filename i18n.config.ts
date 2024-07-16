@@ -1,5 +1,5 @@
-import en from "./lang/en_us";
-import zh from "./lang/zh_cn";
+import en from "./src/lang/en_us";
+import zh from "./src/lang/zh_cn";
 
 export default defineI18nConfig(() => {
   const lang = useCookie("lang");
