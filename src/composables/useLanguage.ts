@@ -1,4 +1,7 @@
-import { langOptions } from "@/lang/base";
+export const langOptions = [
+  { key: "zh", value: "中文" },
+  { key: "en", value: "English" },
+];
 
 export const useLanguage = () => {
   const appConfig = useAppConfig();

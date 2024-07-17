@@ -1,13 +1,11 @@
 <script setup lang="ts">
 const { t } = useI18n();
-
-useSeoMeta({
-  titleTemplate: "",
-  title: t("companyName"),
-});
+const companyName = computed(() => t("companyName"));
+useHead({ title: companyName.value });
 
 const items = ["images/banner1.png", "images/banner2.png"];
 </script>
+
 <template>
   <div>
     <AppSwiper

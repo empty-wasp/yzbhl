@@ -34,7 +34,9 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({ title: "BHL测头" });
+const { t } = useI18n();
+const companyName = computed(() => t("companyName"));
+useHead({ title: companyName.value });
 
 import zh from "@/content/probes/zh/index.json";
 import en from "@/content/probes/en/index.json";

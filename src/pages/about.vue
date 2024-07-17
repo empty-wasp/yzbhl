@@ -1,3 +1,27 @@
+<script setup lang="ts">
+const { t } = useI18n();
+const companyName = computed(() => t("companyName"));
+useHead({ title: companyName.value });
+
+import zh from "@/content/about/zh.json";
+import en from "@/content/about/en.json";
+
+const { language } = useLanguage();
+
+const data: any = { zh, en };
+const result = ref(data[language.value]);
+
+const patentList = Array.from(Array(12).keys(), (n) => n + 1);
+const ui = {
+  wrapper: "mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl",
+  image: {
+    wrapper:
+      "ring-1 ring-gray-200 dark:ring-gray-800 relative overflow-hidden aspect-[16/9] w-full rounded-lg pointer-events-none",
+    base: "object-cover object-top w-full h-full transform transition-transform duration-200 group-hover:scale-105",
+  },
+};
+</script>
+
 <template>
   <div :class="ui.wrapper">
     <AppLandingSection
@@ -31,25 +55,3 @@
     </AppLandingSection>
   </div>
 </template>
-
-<script setup lang="ts">
-useSeoMeta({ title: "关于BHL" });
-
-import zh from "@/content/about/zh.json";
-import en from "@/content/about/en.json";
-
-const { language } = useLanguage();
-
-const data: any = { zh, en };
-const result = ref(data[language.value]);
-
-const patentList = Array.from(Array(12).keys(), (n) => n + 1);
-const ui = {
-  wrapper: "mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl",
-  image: {
-    wrapper:
-      "ring-1 ring-gray-200 dark:ring-gray-800 relative overflow-hidden aspect-[16/9] w-full rounded-lg pointer-events-none",
-    base: "object-cover object-top w-full h-full transform transition-transform duration-200 group-hover:scale-105",
-  },
-};
-</script>

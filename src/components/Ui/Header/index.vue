@@ -4,9 +4,7 @@
       <div :class="ui.left">
         <slot name="left">
           <NuxtLink :to="to" :class="ui.logo">
-            <slot name="logo">
-              {{ title || "Nuxt UI Pro" }}
-            </slot>
+            <slot name="logo"> {{ title }} </slot>
           </NuxtLink>
         </slot>
       </div>
@@ -56,7 +54,11 @@
           </div>
         </UContainer>
       </div>
-      <UVerticalNavigation :links="links" />
+      <UVerticalNavigation
+        :ui="{ wrapper: 'p-2', active: 'text-primary ' }"
+        :links="links"
+      >
+      </UVerticalNavigation>
     </USlideover>
   </header>
 </template>

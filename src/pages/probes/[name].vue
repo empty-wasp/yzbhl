@@ -28,6 +28,10 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n();
+const companyName = computed(() => t("companyName"));
+useHead({ title: companyName.value });
+
 const route = useRoute();
 const { name }: any = route.params;
 
@@ -36,7 +40,6 @@ import zh_400ms from "@/content/probes/zh/400ms.json";
 
 import en_400mini from "@/content/probes/en/400mini.json";
 import en_400ms from "@/content/probes/en/400ms.json";
-
 
 const { language } = useLanguage();
 
